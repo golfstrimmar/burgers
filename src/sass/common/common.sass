@@ -1,0 +1,69 @@
+*
+  outline: 1px solid green
+  box-sizing: border-box
+
+
+.container
+  outline: 1px solid #4164ff
+//------.container--------
+.container
+  max-width: 1230px
+  // height:
+  // flex: 0 1 100%
+  margin: 0 auto
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  // display: grid
+  // grid-template-columns:
+  // grid-template-rows:
+  // grid-template-areas:
+  // grid-area:
+  @media (max-width: 1270px)
+    margin: 0 30px
+
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // margin: 0 10px
+//-------------
+
+
+
+.wrapper
+  overflow: hidden
+  min-height: 100vh
+
+
+.bg
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+
+a
+  display: block
+  transition: all 0.2s ease-in-out
+  color: #181818
+  &:hover
+    color: darken($active, 50%)
+    cursor: pointer
+
+
+.lock
+  overflow: hidden
+.active
+  opacity: 1
+  visibility: visible
+  display: block
+
+
+.title 
+  width: 100%
+  +jucc	
+
+

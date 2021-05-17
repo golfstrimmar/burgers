@@ -1,0 +1,115 @@
+$active: #FF6252
+$purple: #55198A
+$gray3: #828282
+  
+  
+body
+  +bg(white)
+  font-family: 'Poppins', sans-serif
+  font-style: normal
+  font-weight: 500
+  font-size: 18px
+  line-height: 27px
+  color: $gray3
+  
+=f1
+  font-size: 16px
+  line-height: 24px
+  color: $purple
+=f2
+  font-size: 16px
+  line-height: 24px
+  color: #FFFFFF
+=f3
+  font-weight: bold
+  font-size: 56px
+  line-height: 84px
+  color: $purple
+
+=f4
+  font-weight: bold
+  font-size: 36px
+  line-height: 54px
+  color: #55198A
+
+=f5
+  font-weight: bold
+  font-size: 24px
+  line-height: 36px
+  color: #FFFFFF
+=f6
+  font-weight: bold
+  font-size: 24px
+  line-height: 36px
+  color: #333333
+=f7
+
+
+h1,h2,h3,h4, h5, h6
+  display: inline-block
+  margin: 0 auto
+
+
+h1
+  +f3
+
+h2
+  +f4
+  position: relative
+  &:after
+    content: ""
+    position: absolute
+    top: 50% 
+    left: -10px
+    z-index: 2
+    width: 6px
+    height: 40px
+    background: $active
+    transform: translateY(-50%)
+
+
+
+
+.btn 
+  border: 1px solid transparent
+  outline: none!important
+  transition: all 0.2s ease-in-out
+  diplay: inline-block
+  +center
+
+
+.btn--success
+  color: white
+  +bg($active)
+  &:hover
+    +bg(lighten($active,30%))
+    +border(1px , darken($active,10%)!important)
+    box-shadow: 0px 0px 20px lighten($active,60%)!important
+    color: lighten($active,10%)
+  &:focus
+    +border(1px , darken($active,10%)!important)
+    +bg(lighten($active,10%))
+    box-shadow: 0px 0px 20px lighten($active,60%)!important
+    color: white
+  
+.btn--empty 
+  +bg(white)
+  +border(1px,$active)
+  &:hover
+    +bg(lighten($active,30%))
+    +border(1px , darken($active,10%)!important)
+    box-shadow: 0px 0px 20px lighten($active,60%)!important
+    color: lighten($active,10%)
+  &:focus
+    +border(1px , darken($active,10%)!important)
+    +bg(lighten($active,10%))
+    box-shadow: 0px 0px 20px lighten($active,60%)!important
+    color: white
+
+
+%card
+  background: #FFFFFF
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25)
+  border-radius: 20px
+
+// @extend %card

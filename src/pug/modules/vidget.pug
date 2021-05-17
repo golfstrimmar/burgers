@@ -1,0 +1,20 @@
+aside.art_inner__vidget.art_board.art_inner-vidget
+            button.btn.btn--success(type='button').art_inner-vidget__button-top  Быстрая навигация
+            ul.art_inner-vidget__items
+           
+              - 
+                  items = [
+                      { title: "Компания сегодня", src:"assets/img/vidget/img-1.svg", url: "#today"},
+                      { title: "История развития ", src:"assets/img/vidget/img-5.svg", url: "#history"},
+                      { title: "Миссия компании ", src:"assets/img/vidget/img-6.svg", url: "#mission"},
+                      { title: "Стратегия компании ", src:"assets/img/vidget/img-7.svg",url: "#strategy"},
+                      { title: "Наши ценности ", src:"assets/img/vidget/img-8.svg",url: "#values"},
+                      { title: "Манифест ", src:"assets/img/vidget/img-10.svg",url: "#manifest"},
+                      { title: "Команда ", src:"assets/img/vidget/img-3.svg",url: "#team"},
+                    ]
+
+              each item in items
+                li.art_inner-vidget__item.art_inner-vidget-item
+                  a(href=item.url).art_inner-vidget-item__link
+                    .art_inner-vidget-item__title=item.title
+                    img(src=item.src ,alt="img").art_inner-vidget-item__icon

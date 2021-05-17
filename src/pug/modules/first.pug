@@ -1,0 +1,35 @@
+section.first
+  header.header
+    .header__body.container
+      a(href="#!").header__logo
+        img(src="assets/img/logo.svg",alt="img")
+      nav.header__menu.menu
+        i.icon-x.header__close
+        ul.menu__list
+          li.menu__item
+              a.menu__link(href="#today") Компания
+          - 
+                  items = [
+                      { title: "История ", url: "#history"},
+                      { title: "Миссия", url: "#mission"},
+                      { title: "Стратегия", url: "#strategy"},
+                      { title: "Ценности ", url: "#values"},
+                      { title: "Манифест ", url: "#manifest"},
+                      { title: "Команда ", url: "#team"},
+                    ]
+          each item in items
+            li.menu__item
+              a.menu__link(href=item.url)=item.title
+      .header__info.info
+        a(href="#!").info_phone +7(000) 123 45 65
+        .info_search.border-bg
+          input(type='text' placeholder='Поиск')
+          i.icon-search
+      i.icon-align-justify.header__burger
+
+  section.bunner
+    .bunner__body.container
+      .bunner__text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam magni in quidem necessitatibus, placeat, expedita itaque laborum magnam maxime aperiam suscipit amet commodi molestiae a quaerat hic id! Dolores facere consequuntur, ipsam eveniet dicta, laboriosam sed quod possimus nesciunt dolore vero animi explicabo? Accusamus delectus officia voluptatum dolorem, laboriosam aliquam quasi, numquam, laborum odit temporibus hic provident itaque iste perferendis nulla. Ea mollitia ratione corrupti molestiae temporibus assumenda sequi consequatur ad, id magni in necessitatibus ipsum harum odit. Temporibus ipsam velit aut assumenda omnis sed quam ad! Omnis tempora deleniti ex, odio fugit eos reiciendis soluta ad consequatur impedit distinctio.
+
+      i.bunner__img
+      i.bunner__img
