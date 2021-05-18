@@ -1,51 +1,42 @@
 footer#footer.footer
-    .up_down_btn(title='Наверх') 
+    //- .up_down_btn(title='Наверх') 
     .container
       .footer__body
-        .footer__item.footer-item
+        .footer__item.footer-item--first 
           a(href="#!").footer__logo
             img(src="assets/img/svg/logo.svg" alt="logo")
-          .footer-item__title-main UAB TOMETA
-          p.footer-item__property.footer-item__property--cod1 Įmonės kodas: 110559074
-          p.footer-item__property.footer-item__property--cod2 PVM kodas: LT105590716
+          .footer__copyright  © 2021 “crazy cook”
+        .footer__item.footer-item--second
+          .footer-item__title Crazy cook
+          .footer-item__description
+            a(href="#!").footer-item__line О ресторане
+            a(href="#!").footer-item__line Контакты
+        .footer__item.footer-item--third
+          .footer-item__title Меню
+          .footer-item__description
+            a(href="#!").footer-item__line Пицца
+            a(href="#!").footer-item__line Классическое меню
+            a(href="#!").footer-item__line Crazy меню
+            a(href="#!").footer-item__line Роллы
+            a(href="#!").footer-item__line Блог 
+        .footer-properties__data.footer-item--forth
+          .footer-item__title.footer-item__title--data Звоните <span>для заказа</span>
+          .footer__info.info
+            .info__phone-data.info__phone-data--footer
+              img(src="assets/img/svg/s-3.svg",alt="img") 
+              a(href="#!").info__number.info__number--footer +7 (999) 999-99-99
+        .footer-properties__soc.footer-item--fith
+          .footer__property
+            img(src="assets/img/svg/s-2.svg",alt="img")
+            span  Краснодар, Северная 277
+          .footer__property
+            img(src="assets/img/svg/s-1.svg",alt="img") 
+            span  Пн-Вс: 10:00 - 22:00
+          .footer__soc.footer-soc
+            a(href="#!").footer-soc__item
+              img(src="assets/img/svg/s-4.svg",alt="img")
+            a(href="#!").footer-soc__item
+              img(src="assets/img/svg/s-6.svg",alt="img")
+            a(href="#!").footer-soc__item
+              img(src="assets/img/svg/s-5.svg",alt="img")
 
-
-        .footer__item.footer-item
-          .footer-item__title Kaunas, Technikos g. 18S
-          .footer-item__description
-            p.footer-item__line Įprastas darbo laikas:
-            p.footer-item__line I-V 09:00-17:30
-            p.footer-item__line VI - nedirbame
-            p.footer-item__line VII - nedirbame
-          .footer-item__description
-            p.footer-item__line Telefono numeris:
-            p.footer-item__line 
-              span Tel.: 
-              a(href="#!").footer-item__tel 
-                span 837 455185
-            p.footer-item__line 
-              span  Fax.: 
-              a(href="#!").footer-item__fax
-                span 837 455144
-        .footer__item.footer-item
-          .footer-item__title Klaipėda, Rumpiškės g. 2
-          .footer-item__description
-            p.footer-item__line Įprastas darbo laikas:
-            p.footer-item__line I-V 10:00-18:00
-            p.footer-item__line VI 10:00-16:00
-            p.footer-item__line VII nedirbame
-          .footer-item__description
-            p.footer-item__line Telefono numeris:
-            p.footer-item__line 
-              span Tel.: 
-              a(href="#!").footer-item__tel
-                span 8 46 311970
-            p.footer-item__line 
-              span Tel.: 
-              a(href="#!").footer-item__tel
-                span 8 615 52012
-            p.footer-item__line 
-              span Tel.: 
-              a(href="#!").footer-item__tel
-                span 8 618 14158
-      .footer__copyright  2021 © UNIFORMOS All rights reserved

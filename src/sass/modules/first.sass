@@ -3,25 +3,25 @@
   min-height: 100vh
 .header
   z-index: 1000
-  transition: all 0.2s ease-in-out
+  transition: all 0.3s ease-in-out
   position: fixed
   width: 100%
-  height: 80px
-  +bg(rgba(245,245,245,1))
-  @media (max-width: 1199px)
+  height: 100px
+  top :0
+  left: 0
+  +bg(#1c1c1c)
+  @media (min-width: 767px) and (max-width: 1199px) 
     height: 60px
   @media (max-width: 768px)
-    height: 40px
-.info_phone
-  @media (max-width: 767px)
-    color: white
-    text-shadow: 0 0 4px white
+    // height: 40px
+// .info_phone
+//   @media (max-width: 767px)
+//     color: white
+//     text-shadow: 0 0 4px white
 //-------------
 .responciveHeader
-  position: fixed
-  width: 100%
-  height: 60px
-  +bg(rgba(245,245,245, .9))
+  +bg(#1c1c1ce6)
+
 
 
 // =======================================================
@@ -30,18 +30,97 @@
   margin: 0 auto
   position: relative
   height: 100%
-  display: grid
-  grid-template-columns: 250px 1fr minmax(340px, auto)
-  grid-template-rows:  100%
-  grid-template-areas: "logo menu info"
-  @media (max-width: 1340px)
-    margin: 0 20px
-  @media (max-width: 1199px)
-    grid-template-columns: 100px 1fr minmax(340px, auto)
-  @media (max-width: 992px)
-    grid-template-columns: 100px 1fr minmax(200px, auto)
-  @media (max-width: 768px)
-    margin: 0 10px
+  padding: 18px 0 0 0
+  +fdc
+  transition: all 0.3s ease-in-out
+  @media (min-width: 768px) and (max-width: 1199px) 
+    padding: 10px 0 0 0
+  @media (max-width: 767px)
+    padding: 12px 0 0 0
+.header__high
+  +grid(0)
+  +columns(3.7% 40% 30%)
+  justify-content: space-between
+  align-items: center
+  min-height: 76px
+  position: relative
+  @media (min-width: 768px) and (max-width: 1199px)
+    min-height: 60px
+    grid-template-columns: 17.7% 40% 30%
+.header__logo
+  @media (min-width: 768px) and (max-width: 1199px)
+    width: 152px
+    height: 69px
+  @media (max-width: 767px) 
+    width: 155px
+    height: 67px
+
+
+    
+.info__phone-data
+  +alic
+  +juce
+  flex: 0 1 100%
+.header__properties
+  +fdc
+  +jucb	
+  height: 100%
+  padding: 15px 0
+  @media (min-width: 768px) and (max-width: 1199px)
+    padding: 11px 0
+  @media (max-width: 767px) 
+    display: none
+   
+  
+.header__property--address
+.header__property
+  +alic
+  // margin: 12px 0
+  img
+    margin: 0 8px 0 0
+    width: 15px
+    height: 15px
+    @media (min-width: 768px) and (max-width: 1199px) 
+      width: 13px
+      height: 13px
+      margin: 0 11px 0 0
+  span
+    font-size: 16px
+    text-transform: uppercase
+    @media (min-width: 768px) and (max-width: 1199px) 
+      font-size: 14px
+    
+.header__property--work
+
+.header__info
+.info
+  +juce
+  img
+    margin: 0 8px 0 0
+    width: 15px
+    height: 15px
+  @media (max-width: 767px) 
+    display: none
+.info__number
+  font-size: 20px
+  color: white
+  @media (min-width: 768px) and (max-width: 1199px) 
+    font-size: 16px
+.info__phone
+  display: inline-block
+  color: #929292
+  border-bottom: 1px dashed #929292
+  text-transform: uppercase
+  padding: 5px 0 4px 0
+  @media (min-width: 768px) and (max-width: 1199px)
+    font-size: 12px
+  &:hover
+    border-bottom: 1px dashed $active
+
+
+
+
+
 //-------------
 .header__burger
   display: none
@@ -50,17 +129,66 @@
   @media (max-width: 767px)
     font-size: 20px
     display: inline-block
-    color: #181818
-    +absolute(20px,20px,50%,auto,0,0%,-50%)
+    position: relative
+    +absolute(40px,30px,50%,auto,0px,0%,-50%)
+    // height: 2px
+    // width: 40px
+    // +bg(white)
+    transition: all 0.2s ease-in-out
+    span
+      +absolute(40px,2px,50%,auto,0px,0%,-50%)
+      +bg(white)
+      transition: all 0.2s ease-in-out
+    &:hover
+      span,&:after,&:before
+        +bg($active)
+    
+    &:after,&:before
+      content: ""
+      +bg(white) 
+      position: absolute
+      height: 2px
+      width: 40px
+      left: 0
+      z-index: 2
+      transition: all 0.2s ease-in-out
+    &:after
+      top: 0px 
+    &:before
+      bottom: 0px
+
+.header__burger--active
+  span
+    opacity: 0
+  &:after
+    transform: rotate(45deg)
+    top: 15px!important
+    left: 5px!important
+  &:before
+    transform: rotate(-45deg)
+    bottom: 13px!important
+    left: 5px!important
+
+
 //-------------
 .header__logo
-  grid-area: logo
+  width: 191px
+  height: 83px
+  filter: drop-shadow(1px 1px 5px rgba(255, 255, 255, 0.2))
+  // box-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.2)
   img
-    height: 100%
+    +pro
+
 .header__menu
-  margin: 0 30px 0 0
   position: relative
-  grid-area: menu
+  margin: 33px calc((100vw-1320px)/2) 0
+  @media (min-width: 768px) and (max-width: 1199px) 
+    overflow: scroll
+    display: flex
+    justify-content: flex-start
+    flex-wrap: nowrap
+    margin: 60px 0 0 20px
+    // padding: 0 0 0 20px
   @media (max-width: 767px)
     width: 100vw
     min-height: 100vh
@@ -72,21 +200,15 @@
     overflow: auto
     text-align: right
     +fdc
-    +jucs
-    +alie
-    +bg(rgba(0,0,0,.95))
+    // +jucc
+    +alic
+    +bg($bg)
     z-index: 1000
     transition: all 0.2s ease-in-out
+    margin: 100px 0 0
 
-.header__close
-  display: none
-  @media (max-width: 767px)
-    display: block
-    +absolute(auto,auto,10px,auto,10px,0%,0%)
-    color: white
-    font-size: 20px
-    &:hover
-      cursor: pointer
+
+
 
 
 .menu-active
@@ -95,29 +217,35 @@
 
 .menu__list
   +alic
-  +jucb
   height: 100%
+  @media (min-width: 768px) and (max-width: 1199px) 
+    overflow: scroll
+    display: flex
+    justify-content: flex-start
+    flex-wrap: nowrap
   @media (max-width: 767px)
     +fdc
-    +alie
-    
+    +alic
 .menu__item
   +alic
   height: 100%
   +border(1px , transparent)
   transition: all 0.2s ease-in-out
+  margin: 0 23px 0 0
   &:hover
-    +bg(lighten($active,30%))
-    +border(1px , darken($active,10%)!important)
-    box-shadow: 0px 0px 20px lighten($dark-1,60%)!important
-    color: lighten($active,10%)
-  &:focus
-    +border(1px , darken($active,10%)!important)
-    +bg(lighten($active,10%))
-    box-shadow: 0px 0px 20px lighten($dark-1,60%)!important
-    color: white
-    &>span
-      color: white
+    // +bg(lighten($active,30%))
+    // +border(1px , darken($active,10%)!important)
+    box-shadow: 0px 0px 20px lighten($active,60%)!important
+    color: $active
+    @extend %br
+
+  // &:focus
+  //   +border(1px , darken($active,10%)!important)
+  //   +bg(lighten($active,10%))
+  //   box-shadow: 0px 0px 20px lighten($active,60%)!important
+  //   color: white
+  //   &>span
+  //     color: white
   @media (max-width: 767px)
     margin: 0 0 20px 0
     &:last-child
@@ -126,16 +254,18 @@
 .menu__link
   +alic
   height: 100%
-  padding: 0 5px
-  font-size: 12px
-  font-weight: 700
+  // padding: 5px
+  font-size: 14px
+  color: $white
   text-transform: uppercase
-  color: #757575
-
-  @media (max-width: 1199px)
-    font-size: 16px
-
-
+  @media (min-width: 768px) and (max-width: 1199px)
+    white-space: nowrap
+    font-size: 14px
+    line-height: 16px
+  @media (max-width: 767px)
+    font-size: 14px
+    font-weight: normal
+    text-align: center
 .menu__link--active
   +bg($active)
   color: white
@@ -143,49 +273,70 @@
 
 
 
+.header__add--first
+  +absolute(auto,auto,42px,50%,auto,-50%,0%)
+.header__add--second
+  +absolute(auto,auto,242px,50%,auto,-50%,0%)
+.header__add--third
+  +absolute(auto,auto,378px,50%,auto,-50%,0%)
+
+.header__add--third,.header__add--second,.header__add--first
+  font-size: 16px
+  font-weight: bold
+  text-transform: uppercase
+
+.header__add--third
+  span
+    color: $active
 
 
-.header__info
-  grid-area: info
-.info
-  +alic
-  +jucb
-  @media (max-width: 1199px)
-    padding: 0 0 0 0	
-    +fdc
-    +jucc
-    flex-wrap: nowrap
-  @media (max-width: 767px)
-    display: none!important
 
-.info-active
-  @media (max-width: 767px)
-    display: block!important
-    transition: all 0.2s ease-in-out
-//-------------
 
-.info_search
-  +alic
-  height:25px
-  position: relative
-  input
-    &::placeholder
-      color: #757575
-      font-family: 'Oswald', sans-serif
-      font-weight: 500
-      font-size: 15px
-      line-height: 1
+
+
+
+
+// .header__info
+//   grid-area: info
+// .info
+//   +alic
+//   +jucb
+//   @media (max-width: 1199px)
+//     padding: 0 0 0 0	
+//     +fdc
+//     +jucc
+//     flex-wrap: nowrap
+//   @media (max-width: 767px)
+//     display: none!important
+
+// .info-active
+//   @media (max-width: 767px)
+//     display: block!important
+//     transition: all 0.2s ease-in-out
+// //-------------
+
+// .info_search
+//   +alic
+//   height:25px
+//   position: relative
+//   input
+//     &::placeholder
+//       color: #757575
+//       font-family: 'Oswald', sans-serif
+//       font-weight: 500
+//       font-size: 15px
+//       line-height: 1
     
-  i
-    color: #181818
-    font-size: 20px
-    +absolute(auto,auto,50%,auto,10px,0%,-50%)
+//   i
+//     color: #181818
+//     font-size: 20px
+//     +absolute(auto,auto,50%,auto,10px,0%,-50%)
 
 
-  @media (max-width: 1199px)
-    margin: 10px 0 0 0
-  @media (max-width: 767px)
-    margin: 10px 0 0 0
+//   @media (max-width: 1199px)
+//     margin: 10px 0 0 0
+//   @media (max-width: 767px)
+//     margin: 10px 0 0 0
 .bunner
   min-height: 100vh
   +background-img("/assets/img/i-1.png")

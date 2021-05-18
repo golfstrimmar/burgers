@@ -1,48 +1,14 @@
-$active: #FF6252
-$purple: #55198A
-$gray3: #828282
-  
+
   
 body
-  +bg(white)
-  font-family: 'Poppins', sans-serif
-  font-style: normal
-  font-weight: 500
-  font-size: 18px
-  line-height: 27px
-  color: $gray3
-  
-=f1
-  font-size: 16px
-  line-height: 24px
-  color: $purple
-=f2
-  font-size: 16px
-  line-height: 24px
-  color: #FFFFFF
-=f3
+  +bg(#1c1c1c)
+  font-family: 'Roboto', sans-serif
+  font-size: 14px
   font-weight: bold
-  font-size: 56px
-  line-height: 84px
-  color: $purple
+  line-height: normal
+  letter-spacing: normal
+  color: $white
 
-=f4
-  font-weight: bold
-  font-size: 36px
-  line-height: 54px
-  color: #55198A
-
-=f5
-  font-weight: bold
-  font-size: 24px
-  line-height: 36px
-  color: #FFFFFF
-=f6
-  font-weight: bold
-  font-size: 24px
-  line-height: 36px
-  color: #333333
-=f7
 
 
 h1,h2,h3,h4, h5, h6
@@ -50,22 +16,21 @@ h1,h2,h3,h4, h5, h6
   margin: 0 auto
 
 
-h1
-  +f3
+
 
 h2
-  +f4
-  position: relative
-  &:after
-    content: ""
-    position: absolute
-    top: 50% 
-    left: -10px
-    z-index: 2
-    width: 6px
-    height: 40px
-    background: $active
-    transform: translateY(-50%)
+  font-family: "Georgia-Bold"
+  // position: relative
+  // &:after
+  //   content: ""
+  //   position: absolute
+  //   top: 50% 
+  //   left: -10px
+  //   z-index: 2
+  //   width: 20px
+  //   height: 10px
+  //   // background: $active
+  //   transform: translateY(-50%)
 
 
 
@@ -107,9 +72,7 @@ h2
     color: white
 
 
-%card
-  background: #FFFFFF
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25)
-  border-radius: 20px
+%br
+  border-radius: 5px
 
-// @extend %card
+// @extend %br

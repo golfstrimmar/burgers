@@ -1,44 +1,243 @@
 .footer
-  margin: 100px 0 0 0
-  background: #3B3C3D
   color: white
-  padding: 50px 0 20px 0
-  @media (min-width: 0px) and (max-width: 1199px)
-    margin: 6rem 0 0 0
+  padding: 50px 0 0 0
+  @media (min-width: 768px) and (max-width: 1199px)
+    padding: 30px 0 0 0
 
 .footer__body
   display: grid
-  grid-template-columns: 31.9% 39.2% 1fr
-  @media (max-width: 1199px) 
-    grid-template-columns:  1fr
+  grid-template-columns: 25.7% 17.2% 31.5% auto
+  grid-template-areas: "area1 area2 area3 area4" "area1 area2 area3 area5"
+  @media (min-width: 768px) and (max-width: 1199px)
+    grid-template-columns: 34% 31.7% 1fr
+    grid-template-areas: "area1  area4 area5" 
+  @media (max-width: 767px) 
+    grid-template-areas: "area4" "area5" "area3" "area2" "area1" 
+    grid-template-columns: 1fr
+.footer__body
+  .info
+    display: block
   
+.footer-item--first
+  grid-area: area1
+.footer-item--second
+  grid-area: area2
+  @media (min-width: 768px) and (max-width: 1199px)
+    display: none
+.footer-item--third
+  grid-area: area3
+  @media (min-width: 768px) and (max-width: 1199px)
+    display: none
+.footer-item--forth
+  grid-area: area4
+  text-align: right
+  .footer-item__title--data
+    letter-spacing: normal
+.footer-item--fith
+  grid-area: area5
+    
   
 .footer-item__property,.footer-item__line
-  font-size: 15px
-  margin: 0 0 10px 0
+  font-size: 16px
+  margin: 0 0 13px
+  color: white
+
 .footer-item__title-main
   margin: 25px 0
   @media (max-width: 767px) 
     font-size: 18px
 
 .footer-item__title
-  font-weight: 600
+  font-weight: 700
   font-size: 20px
   line-height: 24px
-  color: $active
+  letter-spacing: -.1rem
+  text-transform: uppercase
+  span
+    color: $active
+  @media (min-width: 768px) and (max-width: 1199px) 
+      font-size: 16px
+    
   @media (max-width: 767px) 
     font-size: 15px
+
+
+@media (min-width: 768px) and (max-width: 1199px)
+  .info__number--footer
+    font-size: 20px
+  .info__phone-data--footer
+    img
+      width: 15px
+      height: 15px
+
+  .footer-item--fith
+    .footer__property
+      img
+        width: 10px
+        height: 10px
+        margin: 0 5px 0 0 
+      span
+        font-size: 12px
+  .info__phone-data--footer
+    +jucc
+  .footer-item__title--data
+    +jucc	
+
+  .footer__copyright
+    font-size: 12px
+    margin: 23px auto 0 auto
+  .footer__logo
+    width: 153px
+    height: 56px
+  .footer-soc__item
+    width: 30px
+    height: 30px
+    margin: 0 12px 0 0
+  .footer__info
+    margin: 13px 0 0 0
+  .footer__property
+    margin: 0 0 12px
+  .footer__soc
+    margin: 17px 0 41px
+  .footer-soc__item
+    img
+      width: 20px
+      height: 17px
+
+@media (max-width: 767px) 
+  .footer-item__title--data
+    font-size: 16px
+  .info__number--footer
+    font-size: 20px
+  .footer-soc__item
+    width: 36px
+    height: 36px
+    margin: 0 14px 0 0
+    img
+      width: 20px
+      height: 17px
+  .footer
+    padding: 45px 0 35px
+  .footer-item--forth 
+    text-align: left
+  .footer__info 
+    margin: 18px 0 21px
+  .info__phone-data 
+    justify-content: flex-start
+  .info__phone-data--footer 
+    img 
+      width: 16px
+      height: 15px
+  .footer__property 
+    text-align: left
+    margin: 0 0 21px 0
+  .footer__property 
+    img 
+      width: 13px
+      height: 15px
+      margin: 0 5px 0 0
+  .footer__soc 
+    margin: 22px 0 37px
+    +jucs
+
+  .footer-item__line
+    font-size: 14px
+    margin: -2px 0 13px
+  .footer-item__title
+    letter-spacing: normal
+
+  .footer-item--second 
+    margin: 22px 0 0 0
+  .footer__logo
+    width: 153px
+    height: 56px
+    margin: 20px 0 29px 0
+  .footer__copyright 
+    font-size: 14px
+
+
+
+
+
+
+
 .footer-item__tel,.footer-item__fax
   display: inline-block
   span
     color: $active
     text-decoration: underline
 .footer-item__description
-  margin: 14px 0 38px 0
+  font-size: 16px
+  font-weight: 500
+  margin: 15px 0 0
+  text-transform: uppercase
+  p
   @media (max-width: 767px) 
     font-size: 1.5rem
 .footer__copyright
-  font-size: 10px
-  line-height: 12px
-  text-align: center
-  margin: -18px 0 0 0
+  font-size: 16px
+  font-weight: normal
+  text-transform: uppercase
+  margin: 13px auto 0 auto
+.footer__item--data
+  +juce
+
+
+.info__phone-data--footer
+  img 
+    width: 23px
+    height: 23px
+
+
+
+.info__number--footer
+    font-size: 30px
+    font-weight: 700
+.footer__property
+  font-size: 16px
+  text-transform: uppercase
+  font-weight: 500
+  text-align: right
+  margin: 0 0 26px 0
+  img
+    width: 15px
+    height: 15px
+.footer__info
+  margin: 26px 0 21px
+ 
+
+.footer__soc
+  margin: 33px 0 58px 
+.footer-soc
+  +juce 
+  &__item
+    width: 40px
+    height: 40px
+    +bg($active)
+    transition: all 0.2s ease-in-out
+    margin: 0 16px 0 0
+    +center
+    &:last-child
+      margin: 0 
+    &:hover
+      cursor: pointer
+      +bg(lighten($active, 20%))
+
+
+.footer__item--data
+  +fdc
+  +alie
+  +jucs
+
+    
+
+
+
+
+
+
+
+
+
+
+
