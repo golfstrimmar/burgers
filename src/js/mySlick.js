@@ -1,52 +1,87 @@
 import $ from "jquery";
 // import "./slick.js";
 
-
 $(Document).ready(function() {
-    $(".slider-js-1").slick({
+    $(".slider-bunners-js").slick({
         dots: true,
+        arrows: true,
+        slidesToShow: 1,
+        speed: 800,
+        easing: "ease",
+        cssEase: "linear",
+        centerMode: false,
+        nextArrow: $(".bunners-arrows__arrow_next"),
+        prevArrow: $(".bunners-arrows__arrow_prev"),
+
+        customPaging: function(slider, i) {
+            var current = i + 1;
+            current = current < 10 ? "" + current : current;
+
+            var total = slider.slideCount;
+            total = total < 10 ? "" + total : total;
+
+            return (
+                '<button type="button" role="button" tabindex="0" class="slick-dots-button">\
+			<span class="slick-dots-current">' +
+                "0" +
+                current +
+                '</span>\
+			<span class="slick-dots-separator">/</span>\
+			<span class="slick-dots-total">' +
+                "0" +
+                total +
+                "</span></button>"
+            );
+        },
+    });
+
+    $(".slider-js-2").slick({
+        dots: false,
         // arrows: false,
-        slidesToShow: 3,
+        slidesToShow: 4,
         speed: 800,
         easing: "ease",
         // cssEase: "linear",
-        centerMode: false,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        centerMode: true,
+        // centerMode: true,
+        // autoplay: true,
+        // autoplaySpeed: 2000,
         infinite: true,
         //  initialSlide: 1,
         pauseOnFocus: true,
         pauseOnHover: true,
+        responsive: [{
+                breakpoint: 1465,
+                settings: {
+                    arrows: false,
+                }
+            },
 
-        // customPaging: function (slider, i) {
-        //   var current = i + 1;
-        //   current = current < 10 ? "" + current : current;
+            {
+                breakpoint: 1200,
+                settings: "unslick",
+            },
 
-        //   var total = slider.slideCount;
-        //   total = total < 10 ? "" + total : total;
-
-        //   return (
-        //     '<button type="button" role="button" tabindex="0" class="slick-dots-button">\
-        // 		<span class="slick-dots-current">' +
-        //     current +
-        //     '</span>\
-        // 		<span class="slick-dots-separator">из</span>\
-        // 		<span class="slick-dots-total">' +
-        //     total +
-        //     "</span></button>"
-        //   );
-        // },
+        ],
     });
-    $(".slider-js-2")
-        .slick({
+
+
+
+});
+
+
+window.addEventListener("resize", function() {
+    if (window.innerWidth <= 1200) {
+        // $(".slider-js-2").slick("unslick");
+        // sliderIsLive = false;
+    } else {
+        $(".slider-js-2").slick({
             dots: false,
             // arrows: false,
             slidesToShow: 4,
             speed: 800,
             easing: "ease",
             // cssEase: "linear",
-            centerMode: false,
+            // centerMode: true,
             // autoplay: true,
             // autoplaySpeed: 2000,
             infinite: true,
@@ -54,53 +89,17 @@ $(Document).ready(function() {
             pauseOnFocus: true,
             pauseOnHover: true,
             responsive: [{
+                    breakpoint: 1465,
+                    settings: {
+                        arrows: false,
+                    },
+                },
+
+                {
                     breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 3,
-                    },
-                },
-                {
-                    breakpoint: 800,
-                    settings: {
-                        slidesToShow: 2,
-                    },
-                },
-                {
-                    breakpoint: 500,
-                    settings: {
-                        slidesToShow: 1,
-                    },
+                    settings: "unslick",
                 },
             ],
         });
-
-
-
-    $(".slider-js-3").show().slick({
-        dots: true,
-        arrows: false,
-        slidesToShow: 1,
-        speed: 800,
-        easing: "ease",
-        // cssEase: "linear",
-        centerMode: false,
-        // autoplay: true,
-        // autoplaySpeed: 2000,
-        infinite: true,
-        //  initialSlide: 1,
-        pauseOnFocus: true,
-        pauseOnHover: true,
-    });
-
-
-
-
-
-
-
-
-
-
-
-
+    }
 });

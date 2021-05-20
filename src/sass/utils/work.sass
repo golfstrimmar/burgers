@@ -76,3 +76,47 @@ h2
   border-radius: 5px
 
 // @extend %br
+
+._title
+  +jucc
+  h2
+    font-family: 'Georgia-bold'
+    font-size: 53px
+    font-weight: 700
+    position: relative
+    letter-spacing: .24rem
+    @media (min-width: 768px) and (max-width: 1199px) 
+      font-size: 30px
+      letter-spacing: .15rem
+    @media (max-width: 767px)
+      font-size: 24px
+      letter-spacing: .15rem
+    &:after,&:before
+      content: ""
+      position: absolute
+      +background-img("/assets/img/svg/trident.svg")
+      width: 25px
+      height: 4px
+      top: 50% 
+      
+      z-index: 2
+      transform: translate(0%,-50%)
+      @media (max-width: 767px)
+        width: 12px
+        height: 2px
+    &:after
+      left: -43px
+      @media (max-width: 767px)
+        left: -24px
+    &::before
+      right: -43px
+      transform: rotate(180deg)
+      @media (max-width: 767px)
+        right: -24px
+
+
+
+
+
+
+

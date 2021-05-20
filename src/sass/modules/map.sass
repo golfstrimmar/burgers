@@ -1,0 +1,83 @@
+.map
+.map__wrapper
+  +background-img("/assets/img/png/map.png")
+  +pro
+  min-height: 683px
+  position: relative
+  background-size: auto
+@media (min-width: 1200px)
+    .map-item__title
+      position: absolute
+      width: 500px
+      height: 80px
+      box-shadow: 10px 10px 10px 0 rgba(28, 28, 28, 0.3)
+      background-color: #1c1c1c
+      +center
+      right: 250px
+      top: 54px
+      h2 
+        font-family: Georgia-Bold
+        font-size: 40px
+        font-weight: bold
+        @media (min-width: 768px) and (max-width: 1199px) 
+          font-size: 30px
+          letter-spacing: .15rem
+        @media (max-width: 767px)
+          font-size: 24px
+          letter-spacing: .15rem
+        position: relative
+
+
+
+@media (max-width: 1199px)
+  .map-item__title
+      position: absolute
+      height: auto
+      +center
+      right: 50%
+      transform: translateX(50%)
+      h2 
+        font-family: Georgia-Bold
+        font-size: 30px
+        font-weight: bold
+        &:after,&:before
+          content: ""
+          position: absolute
+          +background-img("/assets/img/svg/trident.svg")
+          width: 25px
+          height: 4px
+          top: 50% 
+          z-index: 2
+          transform: translate(0%,-50%)
+         
+        &:after
+          left: -36px
+        &:before
+          right: -36px
+          transform: rotate(180deg)
+
+
+
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 1199px)
+  .map
+    margin: 156px 0 0 0
+  .map-item__title
+      top: -90px
+      
+
+
+@media (max-width: 767px)
+  .map
+    margin: 119px 0 0 0
+  .map-item__title
+    h2
+      font-size: 24px!important
+    top: -63px
+  .map__wrapper
+    min-height: 376px
+    background-size: 350%

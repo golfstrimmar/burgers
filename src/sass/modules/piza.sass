@@ -1,0 +1,199 @@
+.piza
+  margin: 114px auto 0 auto
+.piza__body
+  +grid(0)
+  +columns(repeat(4, 1fr))
+  margin: 50px -20px 0 
+.piza__wrapper
+  position: relative
+.piza__item
+
+.product-card
+  position: relative
+  +grid(0)
+  grid-template-areas: "area1 area1 area1" "area2 area2 area2" "area3 area3 area3"  "area4 area5 area6"
+  +columns(43% 18.1% 37%)
+  padding: 28px 20px 36px 
+  border: solid 1px transparent
+  transition: all 0.2s ease-in-out
+  &:hover
+    cursor: pointer
+    border: solid 1px $white
+    & > .product-card__title
+      color: #ff4260
+.product-card__img
+  grid-area: area1
+  justify-self: center
+.product-card__title 
+  font-size: 20px
+  grid-area: area2
+  text-transform: uppercase
+  transition: all 0.2s ease-in-out
+.product-card__text  
+  font-size: 14px
+  text-transform: uppercase
+  grid-area: area3
+  padding: 17px 0 25px 0
+.product-card__price
+  font-size: 24px
+  grid-area: area4
+  span
+    font-size: 18px
+.product-card__number
+  width: 36px
+  height: 36px
+  font-size: 20px
+  grid-area: area5
+  +center
+  border: solid 2px #f4f4f4
+
+.product-card__button
+  grid-area: area6 
+  width: 116px
+  height: 36px
+  box-shadow: 5px 5px 10px 0 rgba(255, 3, 41, 0.3)
+  background-color: $active 
+  text-transform: uppercase
+
+.product-card__new-lable
+  transform: translate(-38%,36%)!important
+
+
+
+
+.piza__decor-1
+  +absolute(145px,234px,5%,auto,0,0%,0%)
+  +background-img("/assets/img/png/piza/decor-1.png")
+
+.piza__decor-2
+  +absolute(293px,242px,37%,0,auto,0%,0%)
+  +background-img("/assets/img/png/piza/decor-2.png")
+  background-size: 74%
+  background-position: left
+
+.piza__decor-3
+  +absolute(334px,387px,71%,auto,0,0%,0%)
+  +background-img("/assets/img/png/piza/decor-3.png")
+
+.piza__phone
+  position: relative
+  +background-img("/assets/img/svg/phone.svg")
+  background-size: 60%
+  +absolute(60px,60px,63%,114px,auto,0%,0%)
+  +bg($active)
+  opacity: 0.4
+  box-shadow: 2px 2px 10px 0 rgba(255, 255, 255, 0.1)
+  border: solid 1px rgba(255, 3, 41, 0.6)
+  border-radius: 50%
+
+  &:after,&::before
+    content: ""
+    position: absolute
+    top: 50% 
+    left: 50%
+    z-index: 2
+    border-radius: 50%
+    transform: translate(-50%,-50%)
+  &:after
+    width: 80px
+    height: 80px
+    opacity: 0.8
+    box-shadow: 2px 2px 10px 0 rgba(255, 255, 255, 0.1)
+    border: solid 1px rgba(255, 3, 41, 0.6)
+  &::before
+    width: 100px
+    height: 100px
+    opacity: 0.4
+    box-shadow: 2px 2px 10px 0 rgba(255, 255, 255, 0.1)
+    border: solid 1px rgba(255, 3, 41, 0.6)
+
+
+
+.piza__cart
+  position: relative
+  +absolute(87px,70px,31.8%,auto,0,0%,0%)
+  +bg(white)
+  +background-img("/assets/img/svg/cart-black.svg")
+  background-size: 40%
+
+.piza__cart-number
+  +absolute(26px,26px,10px,auto,15px,0%,0%)
+  border-radius: 50%
+  +center
+  +bg($active)
+// .product-card__link
+//   +absolute(100%,100%,0,0,auto,0%,0%)
+@media (max-width: 1765px) 
+  .piza__decor-1,.piza__decor-2,.piza__decor-3,.piza__phone
+    display: none
+  .piza__cart
+    border-radius: 50%
+    width: 60px
+    height: 60px
+    background-size: 35%
+    background-position: 35% 60%
+    top: 87.5%
+    right: 20px
+  .piza__cart-number
+    font-size: 12px
+    width: 20px
+    height: 20px
+
+
+@media (min-width: 768px) and (max-width: 1199px) 
+  .piza
+    margin: 70px auto 0 auto
+  .piza__body
+    +columns(repeat(3, 1fr))
+    justify-items: center
+    margin: 50px -20px 0 
+  .product-card__img
+    width: 162px
+    height: 162px
+
+  .product-card__title 
+    font-size:  16px
+  .product-card__text
+    font-size: 12px
+    font-weight: normal
+
+  .product-card__number
+    font-size: 14px
+    width: 30px
+    height: 30px
+
+  .product-card__button
+    width: 97px
+    height: 30px
+    font-size: 0
+    margin: 0 0 0 auto
+    +bg(transparent)
+    &:hover
+      +bg(transparent)
+      
+    &:focus
+      +bg(transparent)
+  .product-card__price
+    font-size: 14px
+    +center
+    +absolute(97px,30px,auto,auto,-127px,0%, 0%)
+    z-index: -1
+    +bg($active)
+    &:hover
+      background-color: #ff9cab
+    &:focus
+      background-color: #ff3654
+
+
+  .product-card
+    grid-template-areas: "area1 area1 area1" "area2 area2 area2" "area3 area3 area3"  "area5 area4  area6"
+    +columns(20% 9% 39%)
+    +grid(30px)
+    max-width: 254px
+    padding: 30px 15px 26px 15px
+
+
+
+
+
+

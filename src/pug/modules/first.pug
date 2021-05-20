@@ -1,5 +1,6 @@
 section.first
   header.header
+    .menu__mask
     .header__body.container
       .header__high
         a(href="#!").header__logo
@@ -20,7 +21,9 @@ section.first
           span
     nav.header__menu.menu
         //- i.icon-x.header__close
+        
         ul.menu__list
+          
           li.menu__item
             a.menu__link(href="#!") Crazy меню
           - 
@@ -40,9 +43,23 @@ section.first
               a.menu__link(href=item.url)=item.title
     
 
-  //- section.bunner
-  //-   .bunner__body.container
-  //-     .bunner__text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam magni in quidem necessitatibus, placeat, expedita itaque laborum magnam maxime aperiam suscipit amet commodi molestiae a quaerat hic id! Dolores facere consequuntur, ipsam eveniet dicta, laboriosam sed quod possimus nesciunt dolore vero animi explicabo? Accusamus delectus officia voluptatum dolorem, laboriosam aliquam quasi, numquam, laborum odit temporibus hic provident itaque iste perferendis nulla. Ea mollitia ratione corrupti molestiae temporibus assumenda sequi consequatur ad, id magni in necessitatibus ipsum harum odit. Temporibus ipsam velit aut assumenda omnis sed quam ad! Omnis tempora deleniti ex, odio fugit eos reiciendis soluta ad consequatur impedit distinctio.
+  section.bunners
+      .bunners__body
+        .bunners__arrows.bunners-arrows
+          i.bunners-arrows__arrow.bunners-arrows__arrow_prev
+          i.bunners-arrows__arrow.bunners-arrows__arrow_next
+        .bunners__slider.slider-bunners-js
+            - 
+                items = [
+                  { url:"assets/img/png/i-1.png" },
+                  { url:"assets/img/png/i-1.png" },
+                  { url:"assets/img/png/i-1.png" },
+                  { url:"assets/img/png/i-1.png" },
+                ]
 
-  //-     i.bunner__img
-  //-     i.bunner__img
+            each item in items
+              .bunners__item.slider-bunners-item(style=`background-image: url(${item.url})`)
+                  .slider-bunners-item__body
+                    img(src="assets/img/png/i-1-1.png",alt="img").slider-bunners-item__img
+                    .slider-bunners-item__title Собери сам
+                    a(href="#!").slider-bunners-item__button.btn.btn--success смотреть меню
