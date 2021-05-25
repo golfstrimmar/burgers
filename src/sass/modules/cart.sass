@@ -1,0 +1,1185 @@
+.cart
+  .piza__wrapper
+    padding: 200px 0 0 0
+
+  .button-cart 
+    top: 19.4%
+    @media (max-width:  1560px)
+      
+  .button-phone 
+    top: 58%
+
+  .piza__decor-1 
+    top: 8%
+    width: 130px
+
+  .piza__decor-3 
+    background-image: url(/assets/img/png/classic/decor-2.png)
+    width: 186px
+    height: 264px
+    top: 57%
+
+  .piza__decor-2
+    background-image: url(/assets/img/png/classic/decor-4.png)
+    width: 220px
+    height: 242px
+    top: 25%
+  .piza__decor-4
+    background-image: url(/assets/img/png/drinks/decor-1.png)
+    position: absolute
+    width: 220px
+    height: 242px
+    top: 74%
+    background-repeat: no-repeat
+    @media (max-width:  1560px) 
+      display: none
+
+
+
+
+
+
+
+.cart__content
+  display: grid
+  grid-template-columns: 873px 428px
+    // grid-template-rows:
+  grid-template-areas: 'list ordering' 'forget ordering'
+  column-gap: 20px
+  row-gap: 38px
+  margin: 76px 0 144px
+  section
+    background-color: $white
+    color: #222222
+    ._red
+      color: $active
+// ==============list==============
+.cart__list
+  grid-area: list
+
+// =========common===============
+.ordering__title,.list__title
+  h3
+    font-size: 24px
+    font-weight: 700
+    font-family: "Georgia-Bold"
+
+.list-item,.forget-item,.ordering-item
+  background-color: rgba(102, 102, 102, 0.1)
+  transition: all 0.2s ease-in-out
+  &:hover
+    background-color: rgba(102, 102, 102, 0.3)
+
+
+// ====list==========
+
+
+.list
+  padding: 20px 24px  36px
+
+.list__title, .ordering__title
+    margin: 0 0 20px 0
+
+
+.list-item
+  position: relative
+  padding: 17px 25px  
+  display: grid
+  grid-template-columns: 15%  36% 15.5% 30%
+  grid-template-areas: 'img title number  sum' 
+  margin: 0 0 20px 0
+  &__close
+    font-size: 20px
+    +absolute(20x,20px,5px,auto,5px,0%,0%)
+    cursor: pointer
+  &__img
+    width: 85px
+    height: 85px
+    grid-area:  img
+  &__title
+    +f(20,700)
+    text-transform: uppercase
+    grid-area:  title
+    +fdc
+    +jucb	
+    padding: 20px 0
+    h4
+      margin: 0 0 0 0	
+  &__change
+    span 
+      font-size: 12px
+      font-weight: bold
+      color: #979797
+      text-transform: uppercase
+      border-bottom: 1px dashed #979797
+      transition: all 0.2s ease-in-out
+    &:hover
+        cursor: pointer
+        span
+          color: $active
+          border-bottom: 1px dashed  $active
+  &__number
+    grid-area:  number
+    +alic
+    +jucb	
+    a,.list-item-number__count
+      width: 30px
+      height: 30px
+      font-size: 24px
+      font-weight: bold
+      +center
+    .list-item-number__decr,.list-item-number__inkr
+      position: relative
+      transition: all 0.2s ease-in-out
+      &:hover
+        cursor: pointer
+        +bg(lighten($active, 20%))
+      &:after
+        content: ""
+        background-color: white
+        position: absolute
+        width: 14px
+        height: 2px
+        top: 50% 
+        left: 50%
+        z-index: 2
+        transform: translate(-50%,-50%)
+    .list-item-number__decr
+      background-color: #525252
+    .list-item-number__inkr
+      +bg($active)
+      &:before
+        content: ""
+        background-color: white
+        position: absolute
+        width: 14px
+        height: 2px
+        top: 50% 
+        left: 50%
+        z-index: 2
+        transform: translate(-50%,-50%) rotate(90deg)
+  &__sum
+    grid-area: sum
+    +fdc
+    +jucb
+    +alic
+    padding: 10px 0	
+    span
+      &:first-child
+        +f(16,700)
+      &:last-child
+        +f(22,700)
+        text-transform: uppercase
+
+.list-payment
+    padding: 0 115px 0 0
+    +jucb	
+    span
+      +f(24,700)
+      padding: 0 10px 0 0
+    &__number
+      font-size: 24px
+      font-weight: bold
+      margin: 0 0 0 auto
+      
+
+
+// =========forget===============
+.cart__forget
+  grid-area: forget
+
+.forget
+  &__title
+    height: 60px
+    padding: 15px 626px 23px 25px
+    background-color: rgba(0, 0, 0, 0.1)
+    +f(24,700)
+    h4
+      +jucs	
+      flex-wrap: nowrap
+      span
+        white-space: nowrap
+        margin: 0 8px 0 0
+  &__catalog
+
+
+.forget-catalog
+  padding: 25px 25px  13px  25px
+  +grid(20px)
+  grid-template-columns: repeat(2, 1fr)
+  grid-template-rows: repeat(4, 1fr)
+.forget-catalog__item
+  width: 402px
+  height: 120px
+  margin: 0 0 20px 0
+.forget-item
+  padding: 16px 12px
+  display: grid
+  grid-template-columns: 24% 48% 27%
+  grid-template-areas: 'img description  .' 'img price  number' 
+  justify-content: space-between
+.forget-item__img
+  grid-area: img 
+.forget-item__description
+  grid-area: description
+  text-transform: uppercase
+  +alie
+  margin: 0 0 10px 0
+  span
+    +f(18,700)
+    margin: 0 8px 0 0
+  span 
+.forget-item__price
+  grid-area: price
+  +alie
+  span 
+    text-transform: uppercase
+    &:first-child
+      +f(20,700)
+      margin: 0 10px 0 0
+    &:last-child 
+      +f(16,700)
+.forget-item__number
+  grid-area: number
+.forget-item-number
+  +jucb
+  +alie
+  flex-wrap: nowrap
+  a
+    width: 40px
+    height: 40px
+    +center
+  .forget-item-number__count 
+      border: solid 2px #222222
+      +f(24,700)
+      &:hover
+        cursor: pointer
+        border: solid 2px $active
+  .forget-item-number__inkr 
+      +bg($active)
+      position: relative
+      	
+      &:before
+        content: ""
+        background-color: white
+        position: absolute
+        width: 14px
+        height: 2px
+        top: 50% 
+        left: 50%
+        z-index: 2
+        transform: translate(-50%,-50%) rotate(90deg) 
+      &:after
+        content: ""
+        background-color: white
+        position: absolute
+        width: 14px
+        height: 2px
+        top: 50% 
+        left: 50%
+        z-index: 2
+        transform: translate(-50%,-50%)
+      &:hover
+        cursor: pointer
+        +bg(lighten($active, 20%))
+
+
+// =========ordering===============
+
+.cart__ordering
+  grid-area: ordering
+
+.ordering
+  padding: 20px 30px
+  max-height: 1314px
+
+.connect__form-item
+
+    &:not(&:first-of-type)
+      margin: 0 0 40px
+    &:nth-child(3),&:nth-child(4)
+      margin: 0 0 45px!important
+      
+
+    label
+      justify-content: flex-start!important
+
+.connect__block
+  +grid(20px)
+  +columns(repeat(2, 1fr))
+
+
+
+.connect__form--contacts
+  width: 100%!important
+  padding: 0 0 0 0!important
+  .form__submit-button
+    button
+      margin: -20px 0 0 0
+      padding: 10px 15px
+      border-radius: 5px
+  // .connect__form-item
+  //     label
+  //       @media (max-width: 500px)
+  //         font-size: 1rem!important
+.connect__form-item--message
+    textarea
+      border: none
+      
+
+.contacts-form__item
+  min-height: 30px
+  margin: 30px 0 0 0
+  position: relative
+  
+  label
+    position: absolute
+    top: 50%
+    left: 10px
+    transition: 0.3s
+    transform: translateY(-50%)
+    pointer-events: none
+    width: 100%
+  input
+    color: transparent
+  input::-webkit-input-placeholder
+    color: transparent
+
+.contacts-form__item input:focus + label,
+.contacts-form__item textarea:focus + label
+  font-size: 12px
+  left: 0
+  color: lighten($active, 20%)
+
+
+.form__submit-button
+  height: 60px
+  +f(20,700)
+  width: 100%
+  cursor: pointer
+  text-transform: uppercase
+
+.connect-data__title
+  h5
+    +f(18,700)
+
+.connect-check
+  +fdc
+
+.connect-check__item
+  input 
+    min-height: auto !important
+
+
+.connect__personal
+  +f(12,500)
+  +jucc	
+  margin: 15px 0 0 0
+
+.connect__link
+  text-decoration: underline !important
+
+.connect-data
+  text-transform: uppercase
+  +f(16,700)
+  padding: 25px 14px 35px
+  margin: -20px 0 40px 0!important
+.connect-data--check
+    padding: 25px 14px 12px!important
+.connect-data__item
+  +jucb	
+  margin: 0 0 26px 0
+  &:last-child
+    border-top: 1px solid #222222
+    margin: 0 0 0 0
+    padding: 23px 0 0 0
+
+.connect-data__title
+  margin: 0 0 -7px 0
+
+
+
+
+.connect-delivery
+  +jucb	
+  &__item
+    position: relative
+    height: 60px
+    width: 100%
+ 
+    label
+      height: 54px
+      width: calc(100%-6px)
+      +center
+      justify-content: center !important
+      font-size: 16px
+      font-weight: bold
+      color: #222222
+      text-transform: uppercase
+
+
+        
+    &:first-child
+      flex: 0 1 55%
+      input[type="radio"] + label 
+        transform: translate(3px,3px)
+        top: 0px
+        &:hover
+          cursor: pointer
+          color: red
+    &:last-child
+      flex: 1 0 10%
+      input[type="radio"]+label 
+        transform: translate(3px,3px)
+        top: 0px
+ 
+
+    input[type="radio"]:checked + label
+      background-color: #222222
+      color: white
+      top: 0px
+      
+    input[type="radio"]
+      opacity: 0
+      &:hover
+        cursor: pointer
+      
+
+
+.connect-check
+  .connect-check__item
+    margin: 0 0 15px 0
+    label
+      top: 0px
+
+.connect__form-item--block
+  height: 60px
+  margin: 0 0 43px 0!important
+
+
+
+// ===================================
+// ===================================
+// ===================================
+  
+ 
+
+@media (min-width: 768px) and (max-width: 1560px) 
+    .cart 
+      .button-cart 
+          top: 51.7%!important
+          width: 60px
+          height: 60px
+          +bg($active)
+          .button-cart-number
+            +bg(white)
+            color: $active
+    .cart__content
+      display: grid
+      grid-template-columns: 100%
+      grid-template-areas: 'list ' 'forget' 'ordering'
+      column-gap: 0px
+      row-gap: 0px
+      // margin: 76px 0 144px
+ 
+
+      // ====list==========
+      .list
+        padding: 20px 30px  36px
+        margin: 0 0 40px 0
+      .list-item
+        padding: 20px 25px  
+        grid-template-columns: 16% 42% 14.5% 27%
+        grid-template-areas: 'img title number  sum' 
+        margin: 0 0 20px 0
+        &__close
+          font-size: 16px
+          +absolute(16px,16px,10px,auto,5px,0%,0%)
+        &__img
+          width: 80px
+          height: 80px
+        &__title
+          +f(14,700)
+          padding: 22px 0
+        &__change
+          span 
+            font-size: 10px
+        &__number
+          a,.list-item-number__count
+            width: 22px
+            height: 22px
+            font-size: 18px
+            +center
+          .list-item-number__decr,.list-item-number__inkr
+            &:after
+              width: 10px
+              height: 2px
+          .list-item-number__inkr
+            &:before
+              width: 10px
+              height: 2px
+        &__sum
+          padding: 18px 0	
+          span
+            &:first-child
+              +f(14,700)
+            &:last-child
+              +f(16,700)
+
+      .list-payment
+          padding: 9px 63px 0 0
+          margin: 0 0 -10px 0
+          +jucb	
+          span
+            +f(20,700)
+          &__number
+            font-size: 20px
+
+
+
+
+      // =========forget===============
+      .cart__forget
+        grid-area: forget
+
+      .forget
+        overflow: hidden
+        margin: 0 0 88px 0
+        &__title
+          padding: 20px 626px 0  25px
+          +f(20,700)
+          h4
+            +jucs	
+            flex-wrap: nowrap
+            span
+              white-space: nowrap
+              margin: 0 8px 0 0
+        &__catalog
+        
+        
+      .forget-catalog
+        padding: 25px 25px  13px  17px
+        +grid(20px)
+        grid-template-columns: repeat(auto-fill, 132px)
+        grid-template-rows:  1fr
+        grid-auto-flow: column
+      .forget-catalog__item
+        margin: 0 0 20px 0
+      .forget-item
+        height: 174px
+        width: 132px
+        padding: 0px 12px
+        grid-template-columns: 100%
+        grid-template-areas:  'description' 'img' 'price' 
+        justify-items: center
+        +bg(white)
+      .forget-item__img
+        height: 72px
+        margin: 10px 0 -5px 0
+      .forget-item__description
+        +jucc	
+        span
+          +f(14,700)
+          margin: -5px 0px 0px 0
+      .forget-item__price
+        grid-area: price
+        align-self: end
+        +alie
+        +jucc	
+        padding: 0 0 5px 0
+        +bg($active)
+        width: 100px
+        height: 30px
+        span 
+          text-transform: uppercase
+          color: white
+          &:first-child
+            +f(16,700)
+            margin: 0 10px 0 0
+          &:last-child 
+            +f(12,700)
+      .forget-item__number
+        display: none
+     
+
+
+      // =========ordering===============
+    
+
+      .ordering
+        max-height: 1178px
+        padding: 20px 30px 43px
+      .ordering__title 
+        margin: 16px 0 20px
+      .connect__form-item
+          min-height: 40px!important
+          &:not(&:first-of-type)
+            margin: 40px 0 40px
+            height: 50px
+          &:nth-child(3),&:nth-child(4)
+            margin: 0 0 45px!important
+        
+          label
+            justify-content: flex-start!important
+      .connect__block
+        +grid(20px)
+        +columns(repeat(2, 1fr))
+      .connect__form--contacts
+        width: 100%!important
+        padding: 0 0 0 0!important
+        .form__submit-button
+          button
+            margin: -20px 0 0 0
+            padding: 10px 15px
+            border-radius: 5px
+        // .connect__form-item
+        //     label
+        //       @media (max-width: 500px)
+                // font-size: 1rem!important
+      .connect__form-item--message
+        height: 140px!important
+      .contacts-form__item
+        margin: 30px 0 0 0
+        position: relative
+        label
+          position: absolute
+          top: 50%
+          left: 10px
+          transition: 0.3s
+          transform: translateY(-50%)
+          pointer-events: none
+          width: 100%
+        input
+          color: transparent
+          
+        input::-webkit-input-placeholder
+          color: transparent
+      .contacts-form__item input:focus + label,
+      .contacts-form__item textarea:focus + label
+        font-size: 12px
+        left: 0
+        color: lighten($active, 20%)
+      .form__submit-button
+        height: 50px
+        +f(14,700)
+      .connect-data__title
+        h5
+          +f(18,700)
+      .connect-check
+        +fdc
+      .connect-check__item
+        input 
+          min-height: auto !important
+      .connect__personal
+        +f(12,500)
+        +jucc	
+        margin: 15px 0 0 0
+      .connect__link
+        text-decoration: underline !important
+      .connect-data
+        text-transform: uppercase
+        +f(12,700)
+        height: 130px!important
+        padding: 18px 15px 20px
+        margin: -20px 0 40px 0!important
+      .connect-data--check
+          padding: 25px 14px 12px!important
+          height: 158px!important          
+
+          .connect-data__title
+            h5
+              font-size: 12px
+      .connect-check
+          label
+            font-size: 12px!important
+      .connect-check input[type=radio]:not(:checked)+label:before 
+          width: 14px
+          height: 14px
+          top: 50%
+          transform: translateY(-50%)
+      .connect-check input[type=radio]:checked+label:before, .connect-check input[type=radio]:not(:checked)+label:before 
+        width: 14px
+        height: 14px
+        top: 50%
+        transform: translateY(-50%)
+      .connect-check input[type=radio]:checked+label:after, .connect-check input[type=radio]:not(:checked)+label:after 
+          width: 10px
+          height: 10px
+          top: 50%
+          left:2px
+          transform: translate(0%,-50%)
+
+
+      .connect-data__item
+        +jucb	
+        margin: 0 0 15px 0
+        &:last-child
+          border-top: 1px solid #222222
+          margin: 0 0 0 0
+          padding: 20px 0 0 0
+      .connect-data__title
+        margin: 0 0 -7px 0
+      .connect-delivery
+        +jucb	
+        height: 40px
+
+        &__item
+          position: relative
+          height: 40px
+          width: 100%
+
+          label
+            height: 40px
+            width: 100%
+            +center
+            justify-content: center !important
+            font-size: 13px
+            font-weight: bold
+            color: #222222
+            text-transform: uppercase
+
+
+
+          &:first-child
+            flex: 0 1 55%
+            input[type="radio"] + label 
+              transform: translate(0, 0)
+              top: 0px
+              &:hover
+                cursor: pointer
+                color: red
+          &:last-child
+            flex: 1 0 10%
+            input[type="radio"]+label 
+              transform: translate(0,0)
+              top: 0px
+
+
+          input[type="radio"]:checked + label
+            background-color: $active
+            color: white
+            top: 0px
+
+          input[type="radio"]
+            opacity: 0
+            &:hover
+              cursor: pointer
+      // .connect-check
+      //   .connect-check__item
+      //     margin: 0 0 15px 0
+      //     label
+      //       top: 0px
+        
+      .connect__form-item--block
+        height: 50px
+        margin: 0 0 43px 0!important
+
+      .connect-delivery 
+        margin: 26px 0 47px 0
+
+      .connect-delivery
+        .connect-delivery__item:first-child 
+          flex: 0 1 50%
+
+      .connect
+        &__form-item--name 
+          margin: 40px 0 45px 0!important 
+
+        &__form-item--message
+          margin: 2px 0 40px!important 
+
+      .connect-data--check
+          margin: -20px 0 30px!important
+
+      .connect__link
+        margin: 0 0 0 5px
+
+
+
+// ======================================================
+// ======================================================
+// ======================================================
+// ======================================================
+// ======================================================
+@media (max-width: 767px) 
+    .cart 
+      .button-cart 
+          top: 51.7%!important
+          width: 60px
+          height: 60px
+          +bg($active)
+          .button-cart-number
+            +bg(white)
+            color: $active
+    .cart__content
+      display: grid
+      grid-template-columns: 100%
+      grid-template-areas: 'list ' 'forget' 'ordering'
+      column-gap: 0px
+      row-gap: 0px
+      margin: 60px -20px 56px
+ 
+
+      // ====list==========
+      .list
+        padding: 20px 20px  36px
+        margin: 0 0 40px 0
+      .list-item
+        padding: 20px 15px  
+        grid-template-columns: 79px 46% 28% 
+        grid-template-rows: repeat(2, 1fr) 
+        grid-template-areas: 'img title title' 'img sum number ' 
+        margin: 0 0 20px 0
+        align-items: center
+        &__close
+          font-size: 14px
+          +absolute(16px,16px,8px,auto,5px,0%,0%)
+        &__img
+          width: 70px
+          height: 70px
+          margin: -10px 0 0 0
+        &__title
+          +f(14,700)
+          // padding: 22px 0
+          padding: 0 0 0 0
+        &__change
+          
+          span 
+            font-size: 10px
+        &__number
+          margin: 10px 0 0 0
+          a,.list-item-number__count
+            width: 22px
+            height: 22px
+            font-size: 18px
+            +center
+          .list-item-number__decr,.list-item-number__inkr
+            &:after
+              width: 10px
+              height: 2px
+          .list-item-number__inkr
+            &:before
+              width: 10px
+              height: 2px
+        &__sum
+          align-items: flex-start
+          padding: 21px 0 0 0
+          span
+            &:first-child
+              display: none
+            &:last-child
+              +f(16,700)
+
+      .list-payment
+          padding: 9px 63px 0 0
+          margin: 0 0 -10px 0
+          +jucb	
+          span
+            +f(20,700)
+          &__number
+            font-size: 20px
+
+
+
+
+      // =========forget===============
+      .cart__forget
+        grid-area: forget
+
+      .forget
+        margin: 0 0 30px 0
+        &__title
+          padding: 18px 0 20px 20px
+          +f(20,700)
+          h4
+            +jucs	
+            flex-wrap: nowrap
+            span
+              white-space: nowrap
+              margin: 0 8px 0 0
+        &__catalog
+        
+        
+      .forget-catalog
+        padding: 26px 25px  2px  20px
+        +grid(15px)
+        grid-template-columns: repeat(auto-fill, 132px)
+        grid-template-rows:  1fr
+        grid-auto-flow: column
+      .forget-catalog__item
+        margin: 0 0 20px 0
+      .forget-item
+        height: 174px
+        width: 132px
+        padding: 0px 12px
+        grid-template-columns: 100%
+        grid-template-areas:  'description' 'img' 'price' 
+        justify-items: center
+        +bg(white)
+      .forget-item__img
+        height: 72px
+        margin: 10px 0 -5px 0
+      .forget-item__description
+        +jucc	
+        span
+          +f(14,700)
+          margin: -5px 0px 0px 0
+      .forget-item__price
+        grid-area: price
+        align-self: end
+        +alie
+        +jucc	
+        padding: 0 0 5px 0
+        +bg($active)
+        width: 100px
+        height: 30px
+        span 
+          text-transform: uppercase
+          color: white
+          &:first-child
+            +f(16,700)
+            margin: 0 10px 0 0
+          &:last-child 
+            +f(12,700)
+      .forget-item__number
+        display: none
+     
+
+
+      // =========ordering===============
+    
+
+      .ordering
+        max-height: 1178px
+        padding: 16px 20px 43px
+      .ordering__title 
+        margin: 15px 0 -2px
+      .connect__form-item
+          min-height: 38px!important
+          &:not(&:first-of-type)
+            margin: 40px 0 40px
+            height: 50px
+          &:nth-child(3),&:nth-child(4)
+            margin: 0 0 45px!important
+        
+          label
+            justify-content: flex-start!important
+      .connect__block
+        +grid(20px)
+        +columns(repeat(2, 1fr))
+      .connect__form--contacts
+        width: 100%!important
+        padding: 0 0 0 0!important
+        .form__submit-button
+          button
+            margin: -20px 0 0 0
+            padding: 10px 15px
+            border-radius: 5px
+        // .connect__form-item
+        //     label
+        //       @media (max-width: 500px)
+                // font-size: 1rem!important
+      .connect__form-item--message
+        height: 100px!important
+      .contacts-form__item
+        margin: 30px 0 0 0
+        position: relative
+        label
+          position: absolute
+          top: 50%
+          left: 10px
+          transition: 0.3s
+          transform: translateY(-50%)
+          pointer-events: none
+          width: 100%
+        input
+          color: transparent
+          
+        input::-webkit-input-placeholder
+          color: transparent
+      .contacts-form__item input:focus + label,
+      .contacts-form__item textarea:focus + label
+        font-size: 12px
+        left: 0
+        color: lighten($active, 20%)
+      .form__submit-button
+        height: 50px
+        +f(14,700)
+      .connect-data__title
+        h5
+          +f(18,700)
+      .connect-check
+        +fdc
+      .connect-check__item
+        input 
+          min-height: auto !important
+      .connect__personal
+        +f(12,500)
+        +jucc	
+        margin: 15px 0 0 0
+      .connect__link
+        text-decoration: underline !important
+      .connect-data
+        text-transform: uppercase
+        +f(12,700)
+        height: 140px!important
+        padding: 24px 15px 20px
+        margin: -16px 0 70px!important
+      .connect-data--check
+          padding: 25px 14px 0px!important
+          height: 180px!important   
+          .connect-data__title
+            h5
+              font-size: 14px
+      .connect-check
+        padding: 28px 0 0!important
+        label
+          font-size: 14px!important
+      // .connect-check input[type=radio]:not(:checked)+label:before 
+      //     width: 14px
+      //     height: 14px
+      //     top: 50%
+      //     transform: translateY(-50%)
+      // .connect-check input[type=radio]:checked+label:before, .connect-check input[type=radio]:not(:checked)+label:before 
+      //   width: 14px
+      //   height: 14px
+      //   top: 50%
+      //   transform: translateY(-50%)
+      // .connect-check input[type=radio]:checked+label:after, .connect-check input[type=radio]:not(:checked)+label:after 
+      //     width: 10px
+      //     height: 10px
+      //     top: 50%
+      //     left:2px
+      //     transform: translate(0%,-50%)
+
+
+      .connect-data__item
+        +jucb	
+        margin: 0 0 15px 0
+        &:last-child
+          border-top: 1px solid #222222
+          margin: 0 0 0 0
+          padding: 20px 0 0 0
+      .connect-data__title
+        margin: 0 0 -7px 0
+      .connect-delivery
+        +jucb	
+        height: 40px
+
+        &__item
+          position: relative
+          height: 38px
+          width: 100%
+
+          label
+            height: 38px
+            width: 100%
+            +center
+            justify-content: center !important
+            font-size: 13px
+            font-weight: bold
+            color: #222222
+            text-transform: uppercase
+
+
+
+          &:first-child
+            flex: 0 1 55%
+            input[type="radio"] + label 
+              transform: translate(0, 0)
+              top: 0px
+              &:hover
+                cursor: pointer
+                color: red
+          &:last-child
+            flex: 1 0 10%
+            input[type="radio"]+label 
+              transform: translate(0,0)
+              top: 0px
+
+
+          input[type="radio"]:checked + label
+            background-color: $active
+            color: white
+            top: 0px
+
+          input[type="radio"]
+            opacity: 0
+            &:hover
+              cursor: pointer
+      // .connect-check
+      //   .connect-check__item
+      //     margin: 0 0 15px 0
+      //     label
+      //       top: 0px
+        
+      .connect__form-item--block
+        height: 50px
+        margin: 0 0 43px 0!important
+
+      .connect-delivery 
+        margin: 26px 0 47px 0
+
+      .connect-delivery
+        .connect-delivery__item:first-child 
+          flex: 0 1 50%
+
+      .connect
+        &__form-item--name 
+          margin: 40px 0 45px 0!important 
+
+        &__form-item--message
+          margin: 2px 0 37px!important 
+
+      .connect-data--check
+          margin: -40px 0 40px!important
+
+      .connect__link
+        margin: 0 0 0 5px
+
+
+
+
+
+
+
+// ===============================================
+.cart
+  .product-page__img
+    position: relative
+    &:after
+      content: ""
+      background-color: white
+      position: absolute
+      width: 50%
+      height: 100%
+      top: 0% 
+      right: 0
+      z-index: 2
+
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

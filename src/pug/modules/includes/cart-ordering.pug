@@ -1,0 +1,67 @@
+section#ordering.cart__ordering.ordering
+  .ordering__wrap
+    .ordering__title
+      h3  Оформление заказа :
+    .ordering__form.connect
+          form.connect__form.connect__form--contacts
+            .connect__form-item.connect-delivery
+                .connect-delivery__item
+                  input#cb10(type='radio' checked name='delivery')
+                  label(for='cb10') доставка
+                .connect-delivery__item
+                  input#cb11(type='radio'  name='delivery')
+                  label(for='cb11') самовывоз
+
+            .connect__form-item.connect__form-item--name
+            
+              label(for='name') Имя*
+              input#name(type='text' required='' placeholder=' Введите имя')
+              
+            .connect__form-item.connect__form-item--phone
+              
+              label(for='phone') Телефон*
+              input#phone(type='phone' required='' placeholder='+7 (999) 999-99-99')
+              
+            .connect__form-item.connect__form-item--email
+              label(for='email') Улица*
+              input#email(type='address' required='' placeholder=' Введите улицу')
+              
+            .connect__block.connect__form-item--address
+              .connect__form-item.connect__form-item--block
+                input#house(type='address' required='' placeholder=' № дома')
+                label(for='house') Дом*
+              .connect__form-item.connect__form-item--block
+                
+                input#entrance(type='address' required='' placeholder='№ подъезда ')
+                label(for='entrance') Подъезд
+            .connect__form-item.connect__form-item--message
+              label(for='message')  Примечание к заказу (необязательно)
+              textarea#message(type='text' required='' placeholder=' ' cols='40' rows='6')
+
+            .connect__form-item.connect-data
+              .connect-data__item
+                span  Заказ :
+                span.connect-data__price  400 руб.
+              .connect-data__item
+                span  Доставка :
+                span.connect-data__delivery бесплатно
+              .connect-data__item
+                span  Итого :
+                span.connect-data__total 400 руб.
+            .connect__form-item.connect-data.connect-data--check
+              .connect-data__title
+                h5  Способ оплаты:
+              .connect-data__item.connect-check
+                .connect-check__item
+                  input#cb1(type='radio' name='check')
+                  label(for='cb1') Наличными при получении
+                .connect-check__item
+                  input#cb2(type='radio'  name='check')
+                  label(for='cb2') Банковской картой
+                .connect-check__item
+                  input#cb3(type='radio'  name='check')
+                  label(for='cb3') Онлайн на сайте
+            #submit-button.form__submit-button(type='submit').btn.btn--success Подтвердить заказ
+          .connect__personal
+            p Нажимая кнопку “Подтвертить заказ” я соглашаюсь с 
+            a.connect__link(href="#!") политикой обработки персональных данных

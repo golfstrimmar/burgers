@@ -1,0 +1,382 @@
+// .slide-add-layer
+//   display: block  !important
+.slide-add-layer__wrapper
+.add-wrap 
+  color: #222222
+  +pro
+  padding: 35px 30px 0  20px
+  display: grid
+  grid-template-columns: 59% 39.8%
+  grid-template-areas: 'catalog   title' 'catalog   cards'  'catalog  sum '  'catalog   button '  
+  align-content: start
+  justify-items: right
+.add-wrap__catalog
+  grid-area: catalog
+  max-height: 665px
+.add-wrap__title
+  grid-area:  title
+  justify-self: left
+.add-wrap__cards
+  grid-area:  cards
+  height: 420px
+  overflow: hidden
+  margin: 10px -10px -10px
+  padding: 0 10px
+.add-wrap__sum
+  grid-area:  sum
+  +jucb	
+  text-transform: uppercase
+  +alie
+  width: 300px
+  padding: 0 6px 16px 0
+  span
+    +f(20,700) 
+    color: #666666
+  .add-wrap__number
+    +f(30,700)
+    line-height: 1
+    display: inline-block
+    span
+      +f(18,700)
+      color: #222222
+      text-transform: uppercase
+      margin: 0 0 0 5px
+.add-wrap__button
+  grid-area: button 
+.add-wrap-catalog
+  row-gap: 12px
+  justify-content: left
+  margin: -10px 0 0 0
+.slide-add-layer
+  .popups__inner
+    flex: 0 1 866px
+    max-height: 690px
+  .product-item
+    width: 156px
+    height: 195px
+    padding: 8px 16px 0
+    +fdc
+    +alic
+    +bg(white)
+  .product-item__img
+    width: 120px
+    height: 120px
+  .product-item__title
+    h5 
+      text-align: center
+      line-height: 1
+      padding: 0 0 0 0
+  .product-item__price
+    color: #666666
+    +f(15,700)
+    margin: 7px 0 0 0
+
+.add-wrap__catalog
+  .product-item
+    display: grid
+    grid-template-columns: 100%
+    align-content: start
+    justify-items: center
+.product-item__title
+  margin: 7px 0 0 0
+.add-wrap__title
+  text-transform: uppercase
+  padding: 0 0 0 25px
+  span._red-span
+    color: $active
+  span
+    +f(26,700)
+
+.add-product-card
+  width: 300px
+  min-height: 133px
+  box-shadow: 2px 2px 10px 0 rgba(193, 193, 193, 0.4)
+  padding: 15px 13px 20px 15px
+  display: grid
+  grid-template-columns: 42% 60%
+  grid-template-rows: 39px auto auto
+  grid-template-areas: 'img title' 'img tab'  'img price'
+  position: relative
+  margin: 0 0 20px 0
+  .add-product-card__img
+    grid-area: img
+    width: 100px
+    height: 100px
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+  .add-product-card__title
+    grid-area:  title
+    +f(18,700)
+    text-transform: uppercase
+    align-content: end
+    justify-content: start
+    display: grid
+    margin: 0 0 5px 0
+  .add-product-card__tab
+    grid-area:  tab
+    color: #666666
+    +f(12,700)
+    text-transform: uppercase
+    span
+      border-bottom: 1px solid #666666
+      border-bottom-style: dashed
+      padding: 7px 0 3px 0
+  .add-product-card__price
+    grid-area:  price
+    +f(18,700)
+    color: #666666
+    text-transform: uppercase
+    +alic
+  i
+    color: #c3c3c3
+    width: 10px
+    height: 10px
+    +absolute(10px,10px,15px,auto,15px,0%,0%)
+    cursor: pointer
+
+.add-wrap__button
+  width: 300px
+  height: 46px
+  box-shadow: 5px 5px 10px 0 rgba(255, 3, 41, 0.3)
+  background-color: #ff0329
+  +f(16,700)
+  text-transform: uppercase
+  margin: 10px 0 
+
+
+.add-product-card--empty
+  +jucb
+  +alic
+  padding: 0 50px 0 20px
+  transition: all 0.2s ease-in-out
+  min-height: 120px
+  .add-product-card__img--empty
+      width: 83px
+      height: 83px
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center
+
+  .add-product-card__text--empty
+    color: #dddddd
+    +f(18,700)
+    text-transform: uppercase
+
+
+.slide-add-layer
+  .tabs
+    width: 100%
+  .tabs__body
+    +juca
+    flex: 0 1 100%
+  .tabs-item
+    min-height: 15px
+    // width: 200px
+    transition: all 0.2s ease-in-out
+    +jucb	
+    position: relative
+    span
+      transition: all 0.2s ease-in-out
+    &:hover
+      cursor: pointer
+      span
+        color: $active
+        border-color: $active
+      i
+        color: $active
+    &:hover
+      & .tabs-item__title
+        color: #006064
+
+  .tabs-item__title
+    width :100%
+    padding: 0 
+    position: relative
+    +alic
+    &.act
+      margin:  0 0 60px
+  .tabs-item__img
+    transform: rotate(0deg)
+    // margin: 0 0 0 20px
+    transition: all 0.2s ease-in-out
+    +absolute(auto,auto,50%,auto,50px,0%,-50%)
+    color: #666666
+
+  
+  .tabs-drop
+    display: none
+    min-width: 240px
+    
+    &__info
+      font-weight: normal
+      font-size: 10px
+      line-height: 12px
+      text-transform: uppercase
+      color: #666666
+    &.act
+      z-index: 10000
+      padding: 0 40px 0 0
+      margin: 0 0 15px -103px
+.add-product-card
+  &:hover
+    box-shadow: 0px 0px 10px 0px rgba(193, 193, 193, 0.8)
+.add-product-card__link
+  +absolute(100%,100%,0px,0px,auto,0%,0%)
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 1199px) 
+  .add-wrap 
+    color: #222222
+    +pro
+    padding: 30px 30px 0  30px
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-areas: 'title' 'cards'  'catalog'   ' button '  
+    align-content: start
+    justify-items: left
+
+  .add-wrap__title
+    padding: 0 0 0 0
+    h3
+      +f(26,700)
+  .add-wrap__cards
+    margin: 25px -10px -10px
+    padding: 10px 10px
+    height: 330px
+  .add-product-card
+    min-height: 140px
+    width: 580px
+    grid-template-columns: 23.5% 30%
+    padding: 22px 13px 20px 15px
+  
+  .add-product-card
+    margin: 0 0 30px
+    .add-product-card__title
+      align-content: start
+      margin: -5px 0 5px
+    i 
+      top: 11px
+      right: 25px
+  .add-product-card__tab 
+    margin: -10px 0 0 0
+  .slide-add-layer
+    .tabs-item__title 
+      align-items: flex-start
+
+  .add-product-card--empty
+    +jucs
+    .add-product-card__img--empty 
+      width: 95px
+      height: 90px
+      margin: 0 38px 0 0px
+
+  .add-wrap__catalog
+    width: 620px
+    margin: 20px 0px 0
+    // overflow-y: scroll
+    // overflow-x: scroll
+  .slide-add-layer__wrapper
+    overflow: hidden
+
+  .slide-add-layer
+    .product-item 
+      width: 128px
+      height: 192px
+      padding: 0 0 0 0
+    .product-item__title 
+      margin: 15px 0 0 0
+      h5 
+        font-size: 14px
+    .add-wrap__button 
+      width: 580px
+      height: 40px
+      margin: 50px 0  0
+      font-size: 14px
+    .add-wrap__sum
+      display: none
+
+
+
+@media (max-width: 767px)  
+  .add-wrap 
+    padding: 35px 20px 0 
+    grid-template-columns: 1fr
+    grid-template-areas: 'title' 'cards'  'catalog'   ' button '  
+    align-content: start
+    justify-items: left
+
+  .add-wrap__title
+    padding: 0 0 0 0
+    span
+      +f(22,700)
+  .add-wrap__cards
+    margin: 17px -10px -10px
+    padding: 10px 10px
+    min-height: 293px
+  .add-product-card
+    min-height: 133px
+    width: calc(100vw-40px)
+    grid-template-columns: 39.5% 57%
+    padding: 22px 13px 20px 32px
+  
+  .add-product-card
+    margin: 0 0 20px
+    .add-product-card__title
+      align-content: start
+      margin: -5px 0 5px
+    i 
+      top: 11px
+      right: 11px
+  .add-product-card__tab 
+    margin: -10px 0 0 0
+  .slide-add-layer
+    .tabs-item__title 
+      align-items: flex-start
+
+  .add-product-card--empty
+    +jucs
+    height: 120px
+    padding: 0px 0px 0px 37px
+    .add-product-card__img--empty 
+      width: 95px
+      height: 90px
+      margin: 0 17px 0 0px
+
+  .add-wrap__catalog
+    // width: 620px
+    margin: 20px 0px 0
+    // overflow-y: scroll
+    // overflow-x: scroll
+  .slide-add-layer__wrapper
+    overflow: hidden
+
+  .slide-add-layer
+    .product-item 
+      width: 128px
+      height: 192px
+      padding: 0 0 0 0
+    .product-item__title 
+      margin: 13px 0 0 0
+      h5 
+        font-size: 14px
+    .add-wrap__button 
+      width: calc(100vw-40px)
+      height: 40px
+      margin: 40px 0  0
+      font-size: 14px
+    .add-wrap__sum
+      display: none
+
+
+
+
+
+
+
+
+
+

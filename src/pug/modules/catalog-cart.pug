@@ -1,0 +1,17 @@
+section#cart.piza.cart
+  include ../modules/popup-card
+  .piza__wrapper
+    .piza__decor-1
+    .piza__decor-2
+    .piza__decor-3
+    .piza__decor-4
+    a(href="#!").button-phone
+    a(href="#!").button-cart
+      span.button-cart-number  1
+    .container
+      .piza__title._title
+        h2 Корзина
+      .cart__content
+        include ./includes/cart-list
+        include ./includes/cart-forget
+        include ./includes/cart-ordering

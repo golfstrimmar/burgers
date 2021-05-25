@@ -146,7 +146,7 @@ $dark-1: #212121
       transition: all 0.2s ease-in-out
     &:hover
       span,&:after,&:before
-      +bg($active)
+        +bg($active)
 
     &:after,&:before
       content: ""
@@ -189,14 +189,14 @@ $dark-1: #212121
   @media (min-width: 768px)and  (max-width: 1360px)
     margin: 0 0 0 20px
     padding: 10px 0 0 0    
-  @media (min-width: 768px) and (max-width: 1199px)
-    overflow-x: scroll
-    display: flex
-    justify-content: flex-start
-    flex-wrap: nowrap
-    margin: 60px 0 0 20px
-    // padding: 0 0 0 20px
-    padding: 0 0 0 0
+  // @media (min-width: 768px) and (max-width: 1199px)
+  //   overflow-x: scroll
+  //   display: flex
+  //   justify-content: flex-start
+  //   flex-wrap: nowrap
+  //   margin: 60px 0 0 20px
+  //   // padding: 0 0 0 20px
+  //   padding: 0 0 0 0
   @media (max-width: 767px)
     width: 100vw
     min-height: 100vh
@@ -214,19 +214,19 @@ $dark-1: #212121
     z-index: 1000
     transition: all 0.2s ease-in-out
     margin: 100px 0 0
-.menu__mask
-  content: ""
-  background-color: $bg
-  position: absolute
-  width: 100%
-  height: 25px
-  bottom: -61px
-  left: 0
-  z-index: 2
-  @media (min-width: 1200px)
-    display: none
-  @media (max-width: 767px) 
-    display: none
+// .menu__mask
+//   content: ""
+//   background-color: $bg
+//   position: absolute
+//   width: 100%
+//   height: 25px
+//   bottom: -61px
+//   left: 0
+//   z-index: 2
+//   @media (min-width: 1200px)
+//     display: none
+//   @media (max-width: 767px) 
+//     display: none
    
   
 .menu-active
@@ -236,6 +236,7 @@ $dark-1: #212121
 .menu__list
   +alic
   height: 100%
+  width: 100%!important
   @media (min-width: 768px) and (max-width: 1199px)
     justify-content: flex-start
     flex-wrap: nowrap
@@ -249,7 +250,7 @@ $dark-1: #212121
   height: 100%
   +border(1px , transparent)
   transition: all 0.2s ease-in-out
-  margin: 0 23px 0 0
+  margin: 5px 23px -5px 0
   &:hover
     // +bg(lighten($active,30%))
     // +border(1px , darken($active,10%)!important)
@@ -321,7 +322,7 @@ $dark-1: #212121
   @media (min-width: 768px) and (max-width: 1199px) 
     margin: 162px 0 0 0
   @media (max-width: 767px) 
-    margin: 100px 0 0 0!important
+    margin: 100px 0 140px 0!important
   
   &__body
     position: relative 
@@ -490,20 +491,23 @@ $dark-1: #212121
       height: 17px
 
 @media (max-width: 767px) 
- 
+  .bunners__slider
+    max-height: 200px
+
   .slider-bunners-item 
-    min-height: 200px
-    margin: 0 auto 108px auto
+    max-height: 200px!important
+    min-height: 200px!important
+    margin: 0 auto 90px auto
 
   .slider-bunners-item__body
-    padding: 93px 0 0px 20px
-
+    padding: 93px 0 0px 20px!important
+    max-height: 200px!important
   .slider-bunners-item__title 
     font-size: 10px
   .slider-bunners-item__button
     position: absolute
     width: calc(100%-40px)
-    bottom: -77px
+    bottom: -167px
     left: 50%
     transform: translate(-50%)
     height: 50px
@@ -520,6 +524,7 @@ $dark-1: #212121
     margin: 192px 0 0
     .slick-dots
       +jucc	
+      margin: 10px auto 0 auto
     .slick-dots li:not(.slick-active)
       display: block !important
 

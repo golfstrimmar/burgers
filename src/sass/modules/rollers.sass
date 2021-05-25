@@ -1,0 +1,140 @@
+.rollers__body-sauce
+  +grid(0)
+  grid-template-columns: repeat(6, 1fr)
+  min-height: 260px
+  margin: 26px auto 0 auto
+.body-sauce__item
+  +alic
+  +fdc
+  +jucb
+  padding: 30px 0
+  border: solid 1px transparent
+  transition: all 0.2s ease-in-out
+  &:hover
+    border: solid 1px $white
+.body-sauce-item__title
+  h3
+    font-size: 18px
+    font-weight: bold
+    text-transform: uppercase
+.body-sauce-item__img
+  width: 142px
+  height: 113px
+  background-repeat: no-repeat
+  background-size: 114%
+  background-position: center
+
+.body-sauce-item__price
+  font-size: 16px
+  font-weight: bold
+  display: inline-block
+  margin: 0 13px 0 0
+
+.body-sauce-item__add
+  width: 30px
+  height: 30px
+  box-shadow: 2px 2px 5px 0 rgba(255, 3, 41, 0.2)
+  background-color: #ff0329
+  color: white
+  +background-img("/assets/img/svg/+.svg")
+  background-size: 50%
+  transition: all 0.2s ease-in-out
+  display: inline-block
+  &:hover
+    cursor: pointer
+    +bg(lighten($active,20%))
+
+@media (min-width: 768px) and (max-width: 1199px)
+  .rollers__body-sauce
+    min-height: 200px
+    column-gap: 0
+    grid-template-columns: repeat(6, auto)
+    position: relative
+    padding: 0 0 20px 0
+    margin: 8px auto 0 auto
+  .body-sauce__item
+    width: 148px
+    margin: 0
+  .body-sauce-item__title
+    font-size: 16px
+  .body-sauce-item__img
+    width: 100px
+    height: 78px
+  .body-sauce-item__price
+    font-size: 12px
+  .body-sauce-item__add
+    width: 23px
+    height: 23px
+  .menu__mask--rollers
+    bottom: -5px !important
+
+@media (max-width: 767px) 
+  .rollers__body-sauce
+    min-height: 150px
+    column-gap: 0
+    grid-template-columns: repeat(6, auto)
+    padding: 0 0 20px 0
+    margin: 16px auto 50px auto
+  .body-sauce__item
+    width: 140px
+    margin: 0
+  .body-sauce-item__title
+    font-size: 16px
+  .body-sauce-item__img
+    width: 100px
+    height: 80px
+    margin: 0 auto 21px auto
+  .body-sauce-item__price
+    font-size: 16px
+  .body-sauce-item__add
+    width: 21px
+    height: 21px
+
+
+  .menu__mask--rollers
+    bottom: -5px !important
+    display: block
+
+  .rollers
+    margin-bottom:-28px
+
+
+
+
+.rollers__decor-1
+  +absolute(180px,234px,15%,auto,0,0%,0%)
+  +background-img("/assets/img/png/rollers/decor-4.png")
+  background-size: contain
+  width: 180px
+  height: 201px
+  top: 12%
+.rollers__decor-2
+  +absolute(293px,277px,51%,auto,0,0%,0%)
+  +background-img("/assets/img/png/rollers/decor-3.png")
+  background-size: 74%
+  background-position: right
+  width: 220px
+  height: 298px
+  top: 80%
+.rollers__decor-3
+  +absolute(273px,234px,68%,0,auto,0%,0%)
+  +background-img("/assets/img/png/rollers/decor-2.png")
+  background-size: 72%
+  height: 284px
+  top: 53%
+  background-position: left
+
+.rollers__decor-4
+  +absolute(232px,300px,37%,0,auto,0%,0%)
+  +background-img("/assets/img/png/rollers/decor-1.png")
+  background-size: 74%
+  background-position: left
+  height: 300px
+  top: 7%
+
+@media (max-width: 1750px)
+  .rollers__decor-1,.rollers__decor-2,.rollers__decor-3,.rollers__decor-4,.classic__decor-5,.classic__decor-1,.classic__decor-2,.classic__decor-3,.classic__decor-4,.drinks__decor-1,.drinks__decor-2
+    display: none
+ 
+
+ 

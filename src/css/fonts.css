@@ -1,3 +1,11 @@
+/* @font-face {
+    font-family: Georgia-Bold;
+    src: local(ProximaNova-Regular), url('/georgia-pro-black.woff') format('woff'), url('/georgia-pro-black.ttf') format('truetype'), url('/georgia-pro-black}') format('embedded-opentype'), url('/georgia-pro-black.svg  ') format('svg'), url('/georgia-pro-black.otf  '), url('/georgia-pro-black.eot  ');
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+} */
+
 @font-face {
     font-family: Georgia-Bold;
     src: local(ProximaNova-Regular), url('/georgiab.woff') format('woff'), url('/georgiab.ttf') format('truetype'), url('/georgiab}') format('embedded-opentype'), url('/georgiab.svg  ') format('svg'), url('/georgiab.otf  '), url('/georgiab.eot  ');

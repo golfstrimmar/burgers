@@ -15,7 +15,8 @@ import './js/first'
 // import './js/start-button'
 // import "./js/jquery.nicescroll.min";
 // import "./js/header";
-// import './js/modal'
+import "./js/tabs";
+import './js/modal'
 // import './js/contacts'
 // import "./js/polzunki";
 
@@ -41,8 +42,9 @@ import './css/fonts.css'
 
 
 
-import './css/plyr.css';
-
+// import './css/plyr.css';
+import "./js/jquery.nicescroll.min";
+import "./js/myScroll";
 
 
 

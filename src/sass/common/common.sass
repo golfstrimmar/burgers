@@ -1,10 +1,10 @@
 *
-  outline: 1px solid green
+  // outline: 1px solid green
   box-sizing: border-box
 
 
 .container
-  outline: 1px solid #4164ff
+  // outline: 1px solid #4164ff
 //------.container--------
 .container
   max-width: 1320px
@@ -65,6 +65,104 @@ a
 .title 
   width: 100%
   +jucc	
+
+
+// ==============scroll-block====================
+@media (min-width: 1200px)
+  .scroll-block
+    overflow: visible visible !important
+
+
+@media (min-width: 768px) and (max-width: 1199px) 
+  .scroll-block
+    +grid(40px)
+    +columns(repeat(4, 1fr))
+    grid-auto-flow: column
+  .nicescroll-rails
+    display: none !important
+ 
+@media (max-width: 767px)
+  .scroll-block 
+    +grid(40px)
+    +columns(repeat(4, 1fr))
+    grid-auto-flow: column
+  .nicescroll-rails
+    display: none !important
+
+
+
+// ===========================================    
+.slide-1-popup
+  .nicescroll-rails
+    opacity: 1 !important
+    margin: 0 0 0 12px
+    position: relative
+    +jucc
+    &:after
+        content: ""
+        position: absolute
+        z-index: 2
+        width: 2px
+        height: 286px
+        background-color: #eaeaea
+        left: 50%
+        transform: translate(-50%,0%)
+    .nicescroll-cursors
+      z-index: 5
+      margin: 0 auto
+  .nicescroll-rails-hr
+    display: none!important
+// =================================================
+.slide-add-layer
+  .nicescroll-rails 
+      opacity: 1!important
+      display: block!important
+      margin: 10px 0 0 -4px
+      position: relative
+      +jucc
+      &:after
+        content: ""
+        position: absolute
+        z-index: 2
+        width: 2px
+        height: 621px
+        background-color: #eaeaea
+        left: 50%
+        transform: translate(-50%,0%)
+  .nicescroll-cursors
+        max-height: 200px
+        z-index: 4
+        position: relative
+        z-index: 5
+  .nicescroll-rails-hr
+    display: none!important
+@media (max-width: 1199px) 
+  .slide-add-layer
+    .nicescroll-rails 
+      display: none !important
+
+
+
+.slide-bord
+  div[id^='ascrail']
+    display: none  !important
+
+
+
+
+
+
+
+
+// =-------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 

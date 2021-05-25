@@ -1,0 +1,363 @@
+
+// div.slide-1-popup
+//   display: block !important
+
+.product-page
+.product-page__wrapper
+  +pro
+  box-shadow: 10px 10px 30px 0 rgba(255, 255, 255, 0.2)
+  background-color: #fcfcfc
+  color: #222222
+  +grid(0)
+  grid-template-areas: 'img title' 'img buttons-type' 'img description' 'img buttons-white' 'img catalog' 'buttons-red low'
+  padding: 40px 40px 30px 50px
+  +columns(45.3% 48.4%)
+  justify-content: space-between
+.product-page__img
+  width: 467px
+  height: 478px
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  grid-area: img
+.product-page__button-add,.product-page__button-choice
+  +f(14,bold)
+  text-transform: uppercase
+  width: 218px
+  height: 46px
+.product-page__button-choice
+.product-page__title
+  h3
+    font-size: 36px
+    font-weight: 900
+    text-transform: uppercase
+    grid-area: title
+.product-page__button-type1
+.product-page__button-type2
+.product-page__description
+  +f(16,500)
+  text-transform: uppercase
+  grid-area: description
+  max-height: 78px
+  min-height: 78px
+.product-page__button-add-components,.product-page__button-remove-components
+  transition: all 0.2s ease-in-out
+  flex: 0 1 50%
+  text-transform: uppercase
+  +f(14,500)
+  +center
+  &:hover
+    cursor: pointer
+    +bg(#222222)
+    color: white
+    +f(14,700)
+
+.product-page__buttons-type
+  grid-area: buttons-type
+  +jucs
+  a
+    width: 73px
+    height: 30px
+    +center
+    +f(16,500)
+    margin: 0 15px 0 0
+._button-type-active
+  +bg($active)
+  color: white
+  &:hover
+    +bg(lighten($active,30%))
+
+.product-page__catalog
+  grid-area: catalog
+  max-height: 285px
+.product-page__price
+  +f(30,700)
+  span
+    +f(18,700)
+    text-transform: uppercase
+.product-page__button-add-cart
+  width: 160px
+  height: 46px
+  box-shadow: 5px 5px 10px 0 rgba(255, 3, 41, 0.3)
+  +f(16,700)
+  text-transform: uppercase
+.product-page__buttons-white
+  height: 50px
+  background-color: #eaeaea
+  +jucb
+  padding: 4px
+  grid-area: buttons-white
+.product-page__buttons-red
+  +jucb
+  grid-area: buttons-red
+  align-self: end
+.product-page__low
+  +jucb
+  grid-area: low
+  align-self: end
+
+.product-catalog
+  overflow-y: scroll
+  width: 100%
+  +grid(0)
+  row-gap: 16px
+  +columns(repeat(3,auto))
+  position: relative
+  justify-content: space-between
+  // padding: 12px 0 0 0
+  align-self: end
+.product-item
+  width: 150px
+  height: 190px
+  background-color: #eaeaea
+  flex-wrap: nowrap
+  +jucc
+  padding: 15px 20px
+  +border(1px,transparent)
+  transition: all 0.2s ease-in-out
+  &:hover
+    cursor: pointer
+    +bg(white)
+    +border(1px,$active)
+  &__title
+    h5
+      +f(14,700)
+      text-transform: uppercase
+      padding: 0 0 8px 0
+  &__img
+    width: 122px
+    height: 124px
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+  &__price
+    +f(14,700)
+    text-transform: uppercase
+
+.popups__overlay
+  .button-cart
+    top: 78px
+
+
+@media (min-width: 768px) and (max-width: 1199px) 
+ 
+
+  .product-page__img
+    width: 300px
+    height: 300px
+    margin: 20px auto 0 auto
+  .product-page__title
+    h3
+      +f(26,700)
+
+  .product-page__button-type1,.product-page__button-type2
+    width: 70px!important
+    height: 28px!important
+    +f(14,500)
+    margin: 0 20px 0 0!important
+  .product-page__buttons-type
+    margin: 17px 0 0 0
+
+  .product-page__buttons-red
+
+    a
+      width: 278px
+      height: 40px
+
+  .product-page__description
+    +f(16,500)
+    margin: 22px 0 0 0
+    max-height: 73px
+    min-height: 73px
+
+  .product-page__price
+    +f(24,700)
+    span
+      +f(16,700)
+      text-transform: uppercase
+
+  .product-page__button-add-cart
+    width: 160px
+    height: 40px
+
+  .product-page__buttons-white
+    height: 40px!important
+    padding: 0!important
+    margin: 30px 0 0
+  .product-page__buttons-white  a
+    +f(12,500)
+    height: 40px!important
+    max-width: 278px!important
+    &:hover
+      cursor: pointer
+      +f(12,500)
+
+  .product-page__wrapper
+    grid-template-areas: ' title' ' buttons-type' 'img ' 'description' 'buttons-red' 'buttons-white' ' catalog' ' low'
+    +columns(100%)
+    padding: 30px
+
+  .product-catalog
+    grid-auto-flow: column
+    width: 100%
+    +grid(10px)
+    grid-template-columns: repeat(auto-fill,126px)
+    position: relative
+    margin: 25px 0 0 0
+  .product-item
+    width: 126px
+    height: 160px
+    background-color: #eaeaea
+    flex-wrap: nowrap
+    +jucc
+    padding: 8px 20px
+    +border(1px,transparent)
+    transition: all 0.2s ease-in-out
+    &:hover
+      cursor: pointer
+      +bg(white)
+      +border(1px,$active)
+    &__title
+      h5
+        +f(11,700)
+        text-transform: uppercase
+        padding: 0 0 9px 0
+    &__img
+      width: 103px
+      height: 90px
+    &__price
+      +f(11,700)
+  .product-page__low
+    border-top: 1px solid #999999
+    margin: 27px 0 0
+    padding: 20px 0 0 0
+  // ===========================================
+  .product-page__wrapper
+    min-height: 933px
+    align-content: start
+    
+
+@media (max-width: 767px)
+
+  .product-page__img
+    width: 229px
+    height: 235px
+    margin: 25px auto 0
+  .product-page__title
+    h3
+      +f(22,700)
+
+  .product-page__button-type1,.product-page__button-type2
+    width: 80px!important
+    height: 24px!important
+    +f(14,500)
+    font-size: 14px!important
+    margin: 0 8px 0 0!important
+    +border(1px,$active)
+  .product-page__buttons-type
+    margin: 13px 0 0 0
+
+  .product-page__buttons-red
+    margin: 22px 0  0
+    a
+      width: 160px
+      height: 36px
+      +f(12,700)
+
+  .product-page__description
+    +f(13,500)
+    margin: 9px 0 0 0
+    max-height: 50px
+    min-height: 50px
+
+  .product-page__price
+    +f(24,700)
+    span
+      +f(16,700)
+      text-transform: uppercase
+
+  .product-page__button-add-cart
+    width: 160px
+    height: 40px
+
+  .product-page__buttons-white
+    height: 36px!important
+    padding: 0!important
+    margin: 30px 0 0
+  .product-page__buttons-white  a
+    +f(11,500)
+    height: 36px!important
+    max-width: 180px!important
+    &:hover
+      cursor: pointer
+      +f(11,500)
+
+  .product-page__wrapper
+    grid-template-areas: ' title' ' buttons-type' 'img ' 'description' 'buttons-red' 'buttons-white' ' catalog' ' low'
+    +columns(100%)
+    padding: 35px 20px  40px
+
+  .product-catalog
+    grid-auto-flow: column
+    width: 100%
+    +grid(20px)
+    grid-template-columns: repeat(auto-fill,126px)
+    position: relative
+    margin: 25px 0 0 0
+  .product-item
+    width: 126px
+    height: 160px
+    background-color: #eaeaea
+    flex-wrap: nowrap
+    +jucc
+    padding: 8px 20px
+    +border(1px,transparent)
+    transition: all 0.2s ease-in-out
+    &:hover
+      cursor: pointer
+      +bg(white)
+      +border(1px,$active)
+    &__title
+      h5
+        +f(11,700)
+        text-transform: uppercase
+        padding: 0 0 9px 0
+    &__img
+      width: 103px
+      height: 90px
+    &__price
+      +f(11,700)
+      margin: 10px 0 0
+  .product-page__low
+    border-top: 1px solid #999999
+    margin: 30px 0 0
+    padding: 30px 0 0 0
+    +alic
+  // ===========================================
+  .product-page__wrapper
+    min-height: 858px
+    align-content: start
+
+@media (max-width: 380px) 
+  .product-catalog 
+    margin: 40px 0 0
+  .product-page__buttons-red,.product-page__buttons-white
+    flex-direction: column
+    +alic
+  .product-page__buttons-red,.product-page__buttons-white
+    a
+      margin: 5px 0
+
+  .product-page__buttons-white
+    height: auto!important
+
+  .product-page__wrapper 
+    min-height: 1009px
+
+  .add-product-card 
+    grid-template-columns: 46.5% 72%
+  .slide-bord 
+    .add-product-card__img--empty 
+      margin: 0 20px 0 0
+
+

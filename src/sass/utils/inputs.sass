@@ -1,0 +1,303 @@
+
+  
+  
+  
+$fone: #666666
+$bej: #222222
+
+// .connect-data__item
+//   input
+//     +bg( #FFFFFF)
+//     padding: 0 0 0 15px
+//     transition: all 0.2s ease-in-out
+//     +border(1px,transparent)
+//     // border-radius: 5px
+//     +pro
+//     // &~span
+//     //   transition: all 0.2s ease-in-out
+//     // &::placeholder
+//     //   transition: all 0.2s ease-in-out
+//     & + i
+//       // transform: translate(0,-50%) rotate(0deg)
+//       transition: all 0.2s ease-in-out
+//     &:focus
+//       +bg($fone!important)
+//       border: 1px solid darken($bej,20%)
+//       border-radius: 5px
+//       &::placeholder
+//         opacity: 0
+//         z-index: -1
+//       & + i
+//         opacity: 0
+//         z-index: -1
+//       &~span
+//         opacity: 0
+//         z-index: -1
+
+
+
+// ------------------------------------------------------------------------
+.connect-check
+    border: none!important
+    &__item
+      margin: 0 0 18px 0
+      
+      input
+        height: 20px!important
+        z-index: 1
+        width: 80%
+
+
+    input:not(:placeholder-shown)+label
+      transform: translateY(0)
+      +f(16,700)
+      color: #222222
+      cursor: pointer
+      z-index: 20
+      height: 20px!important
+      padding: 0 0 0 0
+      
+
+
+
+    input[type="checkbox"]:checked,
+    input[type="checkbox"]:not(:checked),
+    input[type="radio"]:checked,
+    input[type="radio"]:not(:checked)
+      position: absolute
+      // left: -9999px
+      opacity: 0
+      cursor: pointer
+
+    input[type="checkbox"]:checked + label,
+    input[type="checkbox"]:not(:checked) + label,
+    input[type="radio"]:checked + label,
+    input[type="radio"]:not(:checked) + label
+      display: inline-block
+      position: relative
+      padding-left: 28px
+      line-height: 20px
+      cursor: pointer
+      
+
+    input[type="checkbox"]:checked + label:before,
+    input[type="checkbox"]:not(:checked) + label:before,
+    input[type="radio"]:checked + label:before,
+    input[type="radio"]:not(:checked) + label:before
+      content: ""
+      position: absolute
+      left: 0px
+      top: 0px
+      width: 20px
+      height: 20px
+      border: 1px solid #b7b7b7
+      background-color: #b7b7b7
+
+
+    input[type="checkbox"]:checked + label:before,
+    input[type="checkbox"]:not(:checked) + label:before
+      border-radius: 2px
+
+    input[type="radio"]:checked + label:before,
+    input[type="radio"]:not(:checked) + label:before
+      border-radius: 100%
+
+    input[type="checkbox"]:checked + label:after,
+    input[type="checkbox"]:not(:checked) + label:after,
+    input[type="radio"]:checked + label:after,
+    input[type="radio"]:not(:checked) + label:after
+      position: relative
+      content: ""
+      position: absolute
+      -webkit-transition: all 0.2s ease
+      -moz-transition: all 0.2s ease
+      -o-transition: all 0.2s ease
+      transition: all 0.2s ease
+
+    input[type="checkbox"]:checked + label:after,
+    input[type="checkbox"]:not(:checked) + label:after
+      left: 3px
+      top: 4px
+      width: 13px
+      height: 9px
+      border-radius: 1px
+      border-left: 4px solid #2979FF
+      border-bottom: 4px solid #2979FF
+      -webkit-transform: rotate(-45deg)
+      -moz-transform: rotate(-45deg)
+      -o-transform: rotate(-45deg)
+      -ms-transform: rotate(-45deg)
+      transform: rotate(-45deg)
+
+    input[type="radio"]:checked + label:after,
+    input[type="radio"]:not(:checked) + label:after
+      left: 0
+      top: 50%
+
+      width: 14px
+      height: 14px
+      border-radius: 50%
+      background-color: $active
+      transform: translate(3px,-50%)
+
+    input[type="checkbox"]:not(:checked) + label:after,
+    input[type="radio"]:not(:checked) + label:after
+      opacity: 0
+
+    input[type="checkbox"]:checked + label:after,
+    input[type="radio"]:checked + label:after
+      opacity: 1
+
+
+// // -----------------------------------------------------------------------------------
+// .contacts-form__item
+//   min-height: 30px
+//   margin: 30px 0 0 0
+//   position: relative
+//   label
+//     position: absolute
+//     top: 50%
+//     left: 10px
+//     transition: 0.3s
+//     transform: translateY(-50%)
+//     pointer-events: none
+//     width: 100%
+//   input
+//     color: transparent
+//   input::-webkit-input-placeholder
+//     color: transparent
+
+// .contacts-form__item input:focus + label,
+// .contacts-form__item textarea:focus + label
+//   transform: translateY(-34px)
+//   font-size: 12px
+//   left: 0
+//   color: lighten($active, 20%)
+
+
+// .news_calc 
+//   padding: 47px 0 0 0
+//   @media (max-width: 1199px) 
+//     display: none
+// .calculator
+//   padding: 30px 28px 30px
+//   +jucb
+//   +pro
+//   &__sliders
+//     flex: 1 1 40%
+//   &__offer
+//     flex: 0 1 46%
+//     margin: 0 0 0 48px
+
+
+
+// .news__body_calc
+//   margin: 0 0 0 0
+// .calculator-sliders
+//   +jucb
+// .title_calc
+//   font-size: 24px
+//   line-height: 28px
+  
+// .news__left
+//   flex: 1 1 10%
+
+// .calculator-sliders
+//   &__body
+//     +jucb
+//     width: 100%
+//     margin: 20px 0 0 0
+//   &__column
+//     flex: 1 1 40%
+//     padding: 0 30px 0 0
+//     &:last-child
+//       flex: 0 1 32%
+//   &__text
+//     flex: 0 1 100% 
+//     font-weight: normal
+//     color: $grey
+//   &__number
+//     flex: 0 1 100% 
+//     +alic
+//     font-weight: normal
+//     font-size: 20px
+//     line-height: 23px
+//     color: #000000
+//     margin: 12px 0 0 0
+    
+// .calculator-section
+//   margin: 0 0 18px 0
+//   &:last-child
+//     margin: 0 0 10px 0
+//   &__title 
+//     font-weight: normal
+//     color: $grey
+//   &__number
+//     +alic
+//     font-weight: normal
+//     padding: 10px 0 3px
+
+//     span.icon-rouble
+//       font-weight: normal
+//   &__marker
+//     font-weight: normal
+//     margin: 0 0 0 5px
+//   &__marker--twenty
+//     font-weight: normal
+//     font-size: 20px
+//     line-height: 23px
+//     color: $grey
+//     display: inline-block
+//     margin: 0 0 0 auto
+
+
+// .range
+//   padding: 0 0 0 0
+// .news-line 
+//   &__body 
+//     padding: 21px 0
+//     +alic
+//     +jucb
+//     border-top: 1px solid $bej
+
+//   &__icon 
+//     width: 40px
+//     height: 40px
+//     +jucs
+//   &__text 
+//     font-weight: normal
+//     color: #000000
+//   &__number
+//     font-weight: normal
+//     color: #000000
+//   &__rate
+//     +alic
+//     font-weight: normal
+//     color: #000000
+//     +juce
+
+// .calculator-offer
+//   &__button 
+//     margin: 18px 0 0 0
+//     width: 250px
+//     height: 48px
+//   &__line
+//     &_last
+//       border-bottom: 1px solid $bej
+ 
+// .news-right_calc
+//   margin-bottom: 0
+// .news-right_calc  
+//   +background-img("/assets/img/calc/calc.webp")
+// .news-right__title_calc
+//   position: relative
+//   z-index: 2 
+//   color: $white
+// .news-right__text_calc 
+//   position: relative
+//   z-index: 2 
+//   color: $white
+//   +alic
+
+
+

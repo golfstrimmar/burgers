@@ -1,5 +1,6 @@
 .piza
   margin: 114px auto 0 auto
+
 .piza__body
   +grid(0)
   +columns(repeat(4, 1fr))
@@ -16,6 +17,7 @@
   padding: 28px 20px 36px 
   border: solid 1px transparent
   transition: all 0.2s ease-in-out
+  min-height: 456px
   &:hover
     cursor: pointer
     border: solid 1px $white
@@ -24,19 +26,28 @@
 .product-card__img
   grid-area: area1
   justify-self: center
+  background-size: 100%
+  width: 217px
+  height: 217px
+  background-repeat: no-repeat
+  background-position: center
 .product-card__title 
   font-size: 20px
   grid-area: area2
   text-transform: uppercase
   transition: all 0.2s ease-in-out
+  margin: 30px 0 0px 0
 .product-card__text  
   font-size: 14px
   text-transform: uppercase
   grid-area: area3
-  padding: 17px 0 25px 0
+  padding: 13px 0 24px
+  font-weight: 500
 .product-card__price
   font-size: 24px
   grid-area: area4
+  align-self: center
+  +bg(transparent)
   span
     font-size: 18px
 .product-card__number
@@ -57,7 +68,8 @@
 
 .product-card__new-lable
   transform: translate(-38%,36%)!important
-
+.product-card__link
+  +absolute(100%,100%,0,0,auto,0%,0%)
 
 
 
@@ -75,7 +87,7 @@
   +absolute(334px,387px,71%,auto,0,0%,0%)
   +background-img("/assets/img/png/piza/decor-3.png")
 
-.piza__phone
+.button-phone
   position: relative
   +background-img("/assets/img/svg/phone.svg")
   background-size: 60%
@@ -85,7 +97,10 @@
   box-shadow: 2px 2px 10px 0 rgba(255, 255, 255, 0.1)
   border: solid 1px rgba(255, 3, 41, 0.6)
   border-radius: 50%
-
+  transition: all 0.2s ease-in-out
+  &:hover
+    cursor: pointer
+    +bg(lighten($active, 20%))
   &:after,&::before
     content: ""
     position: absolute
@@ -109,24 +124,25 @@
 
 
 
-.piza__cart
+.button-cart
   position: relative
   +absolute(87px,70px,31.8%,auto,0,0%,0%)
   +bg(white)
   +background-img("/assets/img/svg/cart-black.svg")
   background-size: 40%
 
-.piza__cart-number
+.button-cart-number
   +absolute(26px,26px,10px,auto,15px,0%,0%)
   border-radius: 50%
   +center
   +bg($active)
+  color: white
 // .product-card__link
 //   +absolute(100%,100%,0,0,auto,0%,0%)
 @media (max-width: 1765px) 
-  .piza__decor-1,.piza__decor-2,.piza__decor-3,.piza__phone
+  .piza__decor-1,.piza__decor-2,.piza__decor-3,.button-phone
     display: none
-  .piza__cart
+  .button-cart
     border-radius: 50%
     width: 60px
     height: 60px
@@ -134,7 +150,7 @@
     background-position: 35% 60%
     top: 87.5%
     right: 20px
-  .piza__cart-number
+  .button-cart-number
     font-size: 12px
     width: 20px
     height: 20px
@@ -146,17 +162,18 @@
   .piza__body
     +columns(repeat(3, 1fr))
     justify-items: center
-    margin: 50px -20px 0 
+    margin: 63px -20px 0
   .product-card__img
     width: 162px
     height: 162px
-
+    background-size: 110%
   .product-card__title 
     font-size:  16px
+    margin: 14px 0 0
   .product-card__text
     font-size: 12px
     font-weight: normal
-
+    padding: 6px 0 24px
   .product-card__number
     font-size: 14px
     width: 30px
@@ -190,9 +207,80 @@
     +columns(20% 9% 39%)
     +grid(30px)
     max-width: 254px
-    padding: 30px 15px 26px 15px
+    padding: 25px 15px 26px 15px
+    min-height: 376px
+  .product-card__new-lable
+    top: 3px!important
+    right: -4px!important
+    width: 40px !important
+    height: 40px !important
+@media (max-width: 767px) 
+  .piza
+    margin: 13px 0 64px 0 
+  .piza__body
+    grid-template-columns: 1fr
+    margin: 14px auto 0 auto
 
+  .product-card
+    border: none
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+    min-height: 160px
+    &:hover
+      border: none
+      border-bottom: 1px solid $active
+  .product-card__img
+      width: 100px
+      height: 100px
+      background-size: 107%
+      background-position: 22%
+  .product-card__title
+    font-size: 16px
+    padding: 0 0 0 20px
+    margin: 0 
+  .product-card__text
+    font-size: 10px
+    font-weight: normal
+    padding: 0 0 0 20px
+    margin: 4px 0 15px
+  .product-card__price
+  .product-card__number 
+    font-size: 14px
+    width: 30px
+    height: 30px
+    margin: 0 0 0 20px
+  .product-card__button 
+    width: 100px
+    height: 30px
+    margin: 0 0 0 auto
+    +bg(transparent)
+    font-size: 0
+    &:hover
+      +bg(transparent)
+    &:focus
+      +bg(transparent)
+  .product-card
+    grid-template-areas: "area1 area2 area2 area2" "area1 area3 area3 area3" "area1 area5 area4 area6"  
+    +columns(100px 0% calc(100%-200px) 100px)
+    padding: 30px 0 20px
+    margin: 0 0 2px 0
+    align-items: center
+  .product-card__price
+    font-size: 16px
+    +center
+    +absolute(100px,30px,auto,auto,-100px,0%, 0%)
+    z-index: -1
+    +bg($active)
+    &:hover
+      background-color: #ff9cab
+    &:focus
+      background-color: #ff3654
 
+  .button-cart
+    bottom: -65px!important
+    top: auto!important
+  .product-card__new-lable
+    top: -12px!important
+    right: -12px!important
 
 
 
