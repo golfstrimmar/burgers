@@ -1,0 +1,164 @@
+.catalog-crazy-2
+  .crazy-1-content__item
+      margin: 0 20px 28px 0
+  .crazy-main-title
+    h2
+      letter-spacing: .14rem
+
+  .catalog-crazy-1__body
+    margin: 0 0 60px 0
+    &:last-child
+      margin: 0 0 0 0
+  .catalog-crazy-1__link--before 
+    opacity: 0.5
+    width: 40px
+    height: 40px
+    background:  rgba(34,34,34,.5)
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    background-image: url(/assets/img/svg/arrow.svg)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: 50%
+    background-size: 50%
+    position: absolute
+    width: 40px
+    height: 40px
+    top: 50%
+    left: -60px
+    transform: translateY(-50%)
+
+    &:hover
+      cursor: pointer
+      background-color: lighten(rgba(34,34,34,.5), 20%) 
+
+
+  .catalog-crazy-1__number
+      font-size: 22px
+      font-weight: bold
+      color: $white
+      text-transform: uppercase
+
+  .catalog-crazy-1__total
+      font-family: Georgia
+      font-size: 22px
+      font-weight: bold
+      color: $white
+      margin: 0 20px 0 auto
+  .catalog-crazy-1__button
+        width: 160px
+        height: 40px
+        margin: 0 28px 0 66px
+        background-color: #939393
+        transition: all 0.2s ease-in-out
+        +center
+        font-family: Georgia
+        font-size: 18px
+        font-weight: bold
+        color: $white
+
+        &:hover
+          background-color: lighten(#939393, 20%)
+          color: darken(#939393, 20%)
+
+  .catalog-crazy-1__content--burger
+    padding: 40px 0 30px 27px
+
+
+  .catalog-crazy-2__body
+    padding: 0 0 122px 0
+
+  .catalog-crazy-1__content--burger
+      .crazy-1-content__item
+        border: 1px solid #fff
+        background-image: radial-gradient(50% 50% at 50% 50%,#444 0,#222 100%)
+      .crazy-item__title
+        color: $active
+
+
+
+.catalog-crazy-3
+  .catalog-crazy-1__button
+    +bg($active)
+    color: white
+
+
+@media (max-width: 767px)
+  .catalog-crazy-3, .catalog-crazy-2
+      .button-cart 
+        bottom: 120px!important
+        z-index: 1000
+
+
+
+@media (min-width: 768px) and (max-width: 1199px) 
+    .catalog-crazy-2 
+      .catalog-crazy-2__body
+        margin: 0 -20px 25px
+        padding: 0 20px
+
+      .catalog-crazy-1__link--before
+        right: 100px
+        left: auto
+        +bg(#939393)
+        width: 34px
+        height: 34px
+
+      .catalog-crazy-1__total
+        font-size: 14px
+        margin: 0 10px 0 auto
+
+      .catalog-crazy-1__number
+        font-size: 18px
+        margin: 0 20px 0 0
+
+      .catalog-crazy-1__button
+        +absolute(100%,50px,auto,0,auto,0%,0%)
+        bottom: -300px
+        margin: 0 0 0 0
+
+      .button-cart 
+        top: 829px
+
+
+
+@media (max-width: 767px) 
+  .catalog-crazy-2
+      .catalog-crazy-2
+        &__body
+          margin: 0 -20px 25px
+          padding: 0 20px
+
+      .catalog-crazy-1__total
+        font-size: 14px 
+
+      .catalog-crazy-1__number
+        font-size: 18px
+        margin: 0 20px 0 0
+
+      .catalog-crazy-1__button
+        +absolute(100%,50px,auto,0,auto,0%,0%)
+        bottom: -300px
+        margin: 0 0 0 0
+
+      .catalog-crazy-1__link--before
+        right: 55px
+        left: auto
+        +bg(#939393)
+        width: 34px
+        height: 34px
+
+
+
+
+
+@media (min-width: 1200px) and (max-width: 1520px) 
+    .catalog-crazy-2 
+      .catalog-crazy-1__link--before
+        right: 100px
+        left: auto
+        +bg(#939393)
+        width: 40px
+        height: 40px

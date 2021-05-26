@@ -1,0 +1,43 @@
+section.first.first--crazy
+  header.header
+    .header__body.container
+      .header__high
+        a(href="#!").header__logo
+          img(src="assets/img/svg/logo.svg",alt="img")
+          .logo-mask(style="background-image: url('assets/img/svg/logo-crazy.svg')")
+        .header__properties
+          .header__property.header__property--address
+            img(src="assets/img/svg/s-2.svg",alt="img")
+            span  Краснодар, Северная 277
+          .header__property.header__property--work
+            img(src="assets/img/svg/s-1.svg",alt="img") 
+            span  Пн-Вс: 10:00 - 22:00
+        .header__info.info
+          .info__phone-data
+            img(src="assets/img/svg/s-3.svg",alt="img") 
+            a(href="#!").info__number +7 (999) 999-99-99
+          .info__phone Заказать звонок
+        .header__burger
+          span
+    nav.header__menu.menu
+            //- i.icon-x.header__close
+
+            ul.menu__list.scroll-block
+
+              li.menu__item
+                a.menu__link(href="#!") Crazy меню
+              - 
+                items = [
+                  { title: "Пицца ", url: "#piza"},
+                  { title: "Классическое меню", url: "#classic-menu"},
+                  { title: "Роллы", url: "#lolls"},
+                  { title: "Напитки ", url: "#drinks"},
+                  { title: "Акции ", url: "#actions"},
+                  { title: "Блог ", url: "#!"},
+                  { title: "О ресторане ", url: "#!"},
+                  { title: "Доставка", url: "#!"},
+                  { title: "Контакты", url: "#!"},
+                  ]
+              each item in items
+                li.menu__item
+                  a.menu__link(href=item.url)=item.title

@@ -16,7 +16,6 @@ $(Document).ready(function() {
                 .siblings(".product-card__price")
                 .css("background-color", "#ff0329");
         });
-
     }
 
 });

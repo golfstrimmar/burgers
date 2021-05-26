@@ -124,6 +124,21 @@ module.exports = {
             template: "src/pug/pages/cart.pug",
             filename: "./cart.html",
         }),
+        new HtmlWebpackPlugin({
+            // hash: false,
+            template: "src/pug/pages/crazy-1.pug",
+            filename: "./crazy-1.html",
+        }),
+        new HtmlWebpackPlugin({
+            // hash: false,
+            template: "src/pug/pages/crazy-2.pug",
+            filename: "./crazy-2.html",
+        }),
+        new HtmlWebpackPlugin({
+            // hash: false,
+            template: "src/pug/pages/crazy-3.pug",
+            filename: "./crazy-3.html",
+        }),
 
         new CopyWebpackPlugin({
             patterns: [

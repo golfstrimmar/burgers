@@ -1,0 +1,318 @@
+.catalog-crazy-1
+  min-height: 100vh
+  background: #101010
+  +background-img("/assets/img/png/crazy/bg.png")
+  backdrop-filter: blur(15px)
+  .button-cart
+    top: 162px
+
+
+
+
+
+
+.catalog-crazy-1__title-main
+  padding: 150px 0 0 0
+
+.crazy-main-title
+  +jucc	
+  h2
+    position: relative
+    font-family: Georgia-bold
+    font-size: 50px
+    font-weight: bold
+    color: white
+    letter-spacing: .14rem
+    &:after, &:before
+      content: ""
+      position: absolute
+      width: 25px
+      height: 4px
+      top: 57% 
+      left: -40px
+      z-index: 2
+      +background-img("/assets/img/svg/trident-white.svg")
+      transform: translate(0%,-50%)
+    &:before
+      transform: translate(0%,-50%) rotate(180deg)
+      right: -40px
+      left: auto
+
+.catalog-crazy-1__description
+  +jucc	
+  font-size: 20px
+  font-weight: 300
+  color: #f4f4f4
+  margin: 18px 0 62px
+
+
+
+.catalog-crazy-1__body
+  background:  rgba(34,34,34,.5)
+  // opacity: 0.8
+  // background-filter: blur(15px)
+  // background: #222222
+  // opacity: 0.7
+.catalog-crazy-1__title
+  background:  rgba(49,49,49,.5)
+.crazy-title
+  position: relative
+  height: 70px
+  +alic
+  +jucs	
+  h3  
+    font-family: 'Georgia-bold'
+    font-size: 22px
+    font-weight: bold
+    color: $white
+    margin: 0 0 0 25px
+    letter-spacing: .14rem
+.catalog-crazy-1__link
+  +bg($active)
+  +center
+  +background-img("/assets/img/svg/arrow.svg")
+  background-size: 50%
+  +absolute(40px,40px,50%,auto,-60px,0%,-50%)
+  transform: translateY(-50%) rotate(180deg) 
+  opacity: 0.5
+  &:hover
+    +bg(lighten($active,20%))
+.catalog-crazy-1__content
+  
+.crazy-1-content
+  +flex
+  padding: 40px 0 30px 15px
+.crazy-1-content__item
+  margin: 0 20px 0 0
+  &:last-child
+    margin: 0 0 0 0
+.crazy-item
+  +fdc
+  +alic
+  +jucb	
+  width: 160px
+  height: 200px
+  position: relative
+  border: solid 1px transparent
+  transition: all 0.2s ease-in-out
+  padding: 13px 0 18px
+  &:after
+    content: ""
+    position: absolute
+    width: 1px
+    height: 100%
+    top: 0% 
+    right: -10px
+    z-index: 2
+    border-right: 1px dashed #7f7f7f
+  &:last-child
+    &:after
+      display: none
+  &:hover
+    cursor: pointer
+    border: solid 1px $white
+    background-image: radial-gradient(50% 50% at 50% 50%, #444444 0%, #222222 100%)
+    .crazy-item__title
+      color: $active
+.crazy-item__title,.crazy-item__price  
+  font-size: 14px
+  font-weight: bold
+  text-transform: uppercase
+  transition: all 0.2s ease-in-out
+.crazy-item__img
+  height: 106px
+           
+
+.crazy-1-content
+  max-width: 100%
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 1199px) 
+    .catalog-crazy-1__body
+      margin: 0 -20px
+    .catalog-crazy-1__title-main
+      padding: 186px 0 44px
+    .crazy-main-title
+      h2
+        font-size: 30px
+        color: white !important
+        letter-spacing: .14rem
+        &:after, &:before
+          width: 18px
+          height: 3px
+          +background-img("/assets/img/svg/trident.svg")
+          transform: translate(0%,-50%)
+        &:after
+          left: -30px
+        &:before
+          right: -30px
+          +background-img("/assets/img/svg/trident.svg")
+          transform: translate(0%,-50%) rotate(180deg)
+        ._red
+          color: white !important
+
+    .catalog-crazy-1__description
+      display: none
+    .crazy-title
+      h3  
+        font-size: 18px
+        margin: 0 0 0 25px
+    .catalog-crazy-1__link
+      +bg($active)
+      +center
+      +background-img("/assets/img/svg/arrow.svg")
+      background-size: 50%
+      +absolute(34px,34px,50%,auto,18px,0%,-50%)
+      transform: translateY(-50%) rotate(180deg) 
+      &:hover
+        +bg(lighten($active,20%))
+    .catalog-crazy-1__content
+
+    .crazy-1-content
+      +flex
+      padding: 34px 0 33px 20px
+      flex-wrap: nowrap
+    .crazy-1-content__item
+      margin: 0 15px 0 0
+      &:last-child
+        margin: 0 0 0 0
+    .crazy-item
+      +fdc
+      +alic
+      +jucb	
+      min-width: 144px
+      height: 180px
+      padding: 13px 0 18px
+    .crazy-item__title,.crazy-item__price  
+      font-size: 12px
+    .crazy-item__img
+      transition: all 0.2s ease-in-out
+      height: 100px
+
+    .catalog-crazy-1
+      .button-cart
+        top: 688px
+
+
+
+@media (max-width: 767px) 
+    .catalog-crazy-1__body
+      margin: 0 -20px
+    .catalog-crazy-1__title-main
+      padding: 192px 0 44px
+    .crazy-main-title
+      h2
+        font-size: 24px
+        line-height: 27px
+        letter-spacing: .14rem
+        &:after, &:before
+          width: 12px
+          height: 2px
+          +background-img("/assets/img/svg/trident.svg")
+          transform: translate(0%,-50%)
+        &:after
+          left: -20px
+        &:before
+          right: -20px
+          +background-img("/assets/img/svg/trident.svg")
+          transform: translate(0%,-50%) rotate(180deg)
+        ._red
+          color: white !important
+
+    .catalog-crazy-1__description
+      display: none
+    .crazy-title
+      h3  
+        font-size: 18px
+        margin: 0 0 0 25px
+        letter-spacing: .14rem
+    .catalog-crazy-1__link
+      +bg($active)
+      +center
+      +background-img("/assets/img/svg/arrow.svg")
+      background-size: 50%
+      +absolute(34px,34px,50%,auto,18px,0%,-50%)
+      transform: translateY(-50%) rotate(180deg) 
+      &:hover
+        +bg(lighten($active,20%))
+    .catalog-crazy-1__content
+
+    .crazy-1-content
+      +flex
+      flex-wrap: nowrap
+      padding: 29px 0 33px 20px
+    .crazy-1-content__item
+      margin: 0 15px 0 0
+      &:last-child
+        margin: 0 0 0 0
+    .crazy-item
+      +fdc
+      +alic
+      +jucb	
+      min-width: 144px
+      height: 180px
+      padding: 13px 0 18px
+    .crazy-item__title,.crazy-item__price  
+      font-size: 12px
+    .crazy-item__img
+      transition: all 0.2s ease-in-out
+      height: 100px
+
+    .catalog-crazy-1
+      .button-cart
+        top: 688px
+
+@media (min-width: 1200px) 
+  .first--crazy
+    .header__logo
+      position: relative
+      img
+        display: none
+      .logo-mask
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0% 
+        left: 0%
+        z-index: 2
+        background-repeat: no-repeat
+        background-position: left
+    .header__properties,  .header__info
+      display: none
+    .header__high
+      // +columns(8.7% 1fr)
+    .header__menu
+      padding: 0 
+      margin: 0 0 0 112px
+      +absolute(auto,auto,50px,calc((100vw-1320px)/2),auto,0%,0%)
+
+      .menu__item
+        margin: 0 23px 0 0
+        &:last-child
+          margin: 0 0 0 0
+
+
+
+@media (min-width: 1200px) and (max-width: 1520px) 
+    .catalog-crazy-1
+      .button-cart
+        top: 63%
+        right: 50px
+ 
+    .catalog-crazy-1__link
+      right: 50px
+
+
+
+@media (min-width: 1200px) and (max-width: 1360px) 
+  .header__menu
+    left: 135px!important
+    margin: 0 0 0 0!important
+ 
+
+
+
+
