@@ -160,9 +160,9 @@ require get_template_directory() . '/includes/acf-options.php';
 require get_template_directory() . '/includes/reg-post-type.php';
 
 
-function add_menuclass($ulclass) {
-return preg_replace('/<a /', '<a class="menu__link"' , $ulclass); }
-  add_filter('wp_nav_menu','add_menuclass');
+// function add_menuclass($ulclass) {
+// return preg_replace('/<a /', '<a class="menu__link"' , $ulclass); }
+//   add_filter('wp_nav_menu','add_menuclass');
 
 
 
@@ -181,10 +181,14 @@ function get_customer_total_order() {
     return $total;
 }
 
+// ----------------------------------------------
+
 add_action('wp_ajax_my_action', 'data_fetch');
 add_action('wp_ajax_nopriv_my_action', 'data_fetch');
+
 get_template_part( './includes/fetch' ); ?>
 
+<!-- ========================================== -->
 
 
 

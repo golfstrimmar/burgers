@@ -8,7 +8,12 @@ get_header( 'crazy' );
 
 
 <section class="catalog-crazy-1 catalog-crazy-2 catalog-crazy-3" id="catalog-crazy-3">
-  <a class="button-phone" href="#!"></a><a class="button-cart" href="#!"><span class="button-cart-number"> 1</span></a>
+  <a class="button-phone" href="#!"></a>
+  <div class="button-cart" >
+  <span class="button-cart-number">
+     <?php echo sprintf($woocommerce->cart->cart_contents_count); ?>
+  </span>
+</div>
   <div class="catalog-crazy-1__title-main crazy-main-title">
     <h2><span class="_red">Crazy </span><span>меню</span></h2>
   </div>

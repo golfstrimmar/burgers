@@ -19,6 +19,7 @@ defined( 'ABSPATH' ) || exit;
 do_action( 'woocommerce_before_cart' ); ?>
 
 
+
 <section class="piza cart" id="cart">
 
   <div class="piza__wrapper">
@@ -27,10 +28,14 @@ do_action( 'woocommerce_before_cart' ); ?>
     <div class="piza__decor-3"></div>
     <div class="piza__decor-4"></div>
 
-    <!-- <a class="button-phone" href="#!"></a
-          ><a class="button-cart" href="#!"
-            ><span class="button-cart-number"> 1</span></a
-          > -->
+  <a class="button-phone" href="#!"></a>
+  <div class="button-cart" >
+  <span class="button-cart-number">
+     <?php echo sprintf($woocommerce->cart->cart_contents_count); ?>
+  </span>
+</div>
+
+       
 
 
 
@@ -120,7 +125,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 
 					<td class="product-quantity	list-item__number list-item-number	" data-title="<?php esc_attr_e( 'Quantity', 'woocommerce' ); ?>">
-					<?php
+				
+  
+        
+        <?php
 						if ( $_product->is_sold_individually() ) {
 							$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
 						} else {
@@ -129,7 +137,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 									'input_name'   => "cart[{$cart_item_key}][qty]",
 									'input_value'  => $cart_item['quantity'],
 									'max_value'    => $_product->get_max_purchase_quantity(),
-									'min_value'    => '0',
+									'min_value'    => '1',
 									'product_name' => $_product->get_name(),
 								),
 								$_product,

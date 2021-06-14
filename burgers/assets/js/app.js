@@ -18754,8 +18754,31 @@
                             o()(".product-page__wrapper").html(response);
                         }
                     );
+                    o()(document).on("click", ".popups-init-js-bord", function() {
+                        o()(".slide-1-popup").fadeIn(200),
+                            o()("#slide-bord").fadeIn(200);
+                        o()(".scroll-block-popup").niceScroll({
+                                cursorcolor: "#ff0329",
+                                cursorwidth: "4px",
+                            }),
+                            o()(".scroll-block-popup-add").niceScroll({
+                                cursorcolor: "#ff0329",
+                                cursorwidth: "4px",
+                                cursorborder: "",
+                            }),
+                            o()("body").css("overflow", "hidden");
+                    });
+                    o()(document).on("click", ".close-js", function() {
+                            o()(this).closest(".popups").fadeOut(200),
+                                o()("body").css("overflow", "visible");
+                        }),
+                        o()(document).on("click", ".popups__overlay", function(e) {
+                            o()(e.target).is(o()(this)) &&
+                                (o()(this).closest(".popups").fadeOut(200),
+                                    o()("body").css("overflow", "visible"));
+                        });
                 }
-                o()(".link_popups").click(function(e) {
+                o()(document).on("click", ".link_popups", function(e) {
                     fetch(e);
                 });
             }),
@@ -18767,6 +18790,7 @@
             o()(document).ready(function() {
                 o()(".popups").fadeOut(200),
                     o()(".popups-init-js-bord").on("click", function() {
+
                         o()(".slide-1-popup").fadeIn(200),
                             o()("#slide-bord").fadeIn(200);
                         // o()(".scroll-block-popup").niceScroll({
@@ -18791,8 +18815,8 @@
                     });
             });
         o()(document).ready(function() {
-            // o()(".popups").fadeOut(200),
-            o()(".popups-init-js").on("click", function() {
+            o()(".popups").fadeOut(200),
+                o()(".popups-init-js").on("click", function() {
                     var e = o()(this).attr("rel");
                     // var data = o()(this).attr("data");
                     o()(".slide-1-popup").fadeIn(200),

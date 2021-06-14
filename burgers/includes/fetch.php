@@ -1,25 +1,17 @@
+<?php 
 
+function data_fetch($postID){
+
+
+$postID =  $_POST['param'];
+
+?>
+
+<?php get_template_part( './includes/slide-bord' ); ?>
 <?php
-function data_fetch(){
-
- get_template_part( './includes/slide-bord' ); ?>
-<!-- <div style="color: blue; font-size: 30px;" class='init'>slide-bord</div>-->
-          
-<script>
-document.querySelector(".init").addEventListener("click", function() {
-    alert("success");
-});
-</script>
-
-
-
-<?php
-$postID= $_POST['param'];
-            $products = get_posts($product_args);
-            $queried_object = get_queried_object();
-            $term_id = $queried_object->term_id;
+        
             $args = array( 
-              'showposts' => 70, 
+                            'showposts' => 70, 
                             'post_type' => 'product',
                             'p' => $postID,
                     				'orderby' => 'date',
@@ -94,22 +86,5 @@ do_action( 'product_excerpt' );
  
 }
  wp_reset_postdata();
-
 }
-?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

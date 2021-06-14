@@ -2207,10 +2207,11 @@ div.new-lable span {
     grid-area: area6;
     width: 116px;
     height: 36px;
-    -webkit-box-shadow: 5px 5px 10px 0 rgba(255, 3, 41, 0.3);
-    box-shadow: 5px 5px 10px 0 rgba(255, 3, 41, 0.3);
-    background-color: #ff0329;
+    /* -webkit-box-shadow: 5px 5px 10px 0 rgba(255, 3, 41, 0.3); */
+    /* box-shadow: 5px 5px 10px 0 rgba(255, 3, 41, 0.3); */
+    /* background-color: #ff0329; */
     text-transform: uppercase;
+    margin: 0 0 0 -60px;
 }
 
 .product-card__new-lable {
@@ -2340,8 +2341,7 @@ div.new-lable span {
     opacity: 0.4;
 }
 
-
-/* .button-cart {
+.button-cart {
     position: fixed;
     width: 87px;
     height: 70px;
@@ -2353,8 +2353,7 @@ div.new-lable span {
     background-size: cover;
     background-position: 50%;
     background-size: 40%;
-} 
-*/
+}
 
 .xoo-wsc-items-count {
     width: 26px;

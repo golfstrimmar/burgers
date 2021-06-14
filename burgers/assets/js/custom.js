@@ -14,6 +14,6 @@
 
 
 
-document.getElementById("catalog-1").onclick = function() {
-    window.location.href = "http://pizza.newstory.group/crazy-2/";
-};
+// document.getElementById("catalog-1").onclick = function() {
+//     window.location.href = "http://pizza.newstory.group/crazy-2/";
+// };

@@ -49,6 +49,13 @@ do_action( 'woocommerce_before_main_content' );
 <?php  include(get_template_directory().'/includes/bunners.php'); ?>
 <!-- ======================================================= -->
 
+<div class="button-cart" >
+  <span class="button-cart-number">
+     
+     <?php echo sprintf($woocommerce->cart->cart_contents_count); ?>
+  </span>
+</div>
+          
 
 <?php
 $args = array(
@@ -192,7 +199,7 @@ $category_id = $product_category->term_id ;
       </section>
 
 
-
+<!--  -->
 
 
 <!-- ====================== -->

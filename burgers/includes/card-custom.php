@@ -1,16 +1,17 @@
-		
+
+	
 	
 	<li	<?php wc_product_class( 'card-object	piza__item product-card', $product ); ?>   >
- 							 <a
+						
+							<!-- открытие попап окна  -->
+							<a
                   class="product-card__link popups-init-js link_popups"
                   href="#!"
                   rel="slide-1-popup"
 									data="<?php the_ID(); ?>"
-                >
-						
+              >
 							</a> 
-
-
+							<!-- открытие попап окна  -->
 
 
 
@@ -56,8 +57,7 @@
 		?>
           </div>
 
-      
-
+<a href="http://pizza.newstory.group/cart/"	class="product-card__button">
 <?php 
 	/**
 	 * Hook: woocommerce_after_shop_loop_item.
@@ -67,6 +67,6 @@
 	 */
 	do_action( 'woocommerce_after_shop_loop_item' );
 	?>
-
+</a> 
 
     </li>

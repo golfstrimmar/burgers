@@ -22,17 +22,17 @@
       </div>
 
 
-      <!-- <div class="footer__item footer-item--second">
+      <div class="footer__item footer-item--second">
         <div class="footer-item__title">Crazy cook</div>
         <div class="footer-item__description">
         </div>
-      </div> -->
-
+      </div>
+<!-- 
 <?php if ( is_active_sidebar( 'contacts-sidebar' ) ) : ?>
 <div  class="footer__item footer-item--second" id="contacts-sidebar">
 <?php dynamic_sidebar( 'contacts-sidebar' ); ?>
 </div>
-<?php endif; ?>
+<?php endif; ?> -->
 
       <div class="footer__item footer-item--third">
 
